@@ -18,8 +18,33 @@
   width: 100%;
 }
 
-.typical-text {
-  color: #3e64ff;
+ul {
+  list-style-type: none;
+  /* margin-top: 12px; */
+}
+span > a {
+  float: right;
+  margin-left: 30px;
+  margin-right: 30px;
+  color: black
+}
+
+span > a:hover {
+  color: #f26b38;
+}
+
+a {
+  color: #f26b38;
+  text-decoration: none !important;
+}
+
+.nav {
+  font-family: 'Roboto Mono';
+  color: inherit;
+  font-size: 16px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 10%;
 }
 
 /* ====== */
@@ -30,9 +55,8 @@
   position: relative;
   color: black;
   font-family: 'Roboto Mono';
+  font-weight: bold;
   font-size: 60px;
-  /* Animation provies a slight random skew. Check bottom of doc
-   for more information on how to random skew. */
   animation: glitch-skew 1s infinite linear alternate-reverse;
 }
 .glitch::before {
@@ -44,12 +68,7 @@
   height: 100%;
   left: 2px;
   text-shadow: -2px 0 #ff00c1;
-  /* Creates an initial clip for our glitch. This works in
-   a typical top,right,bottom,left fashion and creates a mask
-   to only show a certain part of the glitch at a time. */
   clip: rect(44px, 450px, 56px, 0);
-  /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
-   with an alternating animation to keep things fresh. */
   animation: glitch-anim 5s infinite linear alternate-reverse;
 }
 .glitch::after {
@@ -63,10 +82,7 @@
   text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
   animation: glitch-anim2 1s infinite linear alternate-reverse;
 }
-/* Creates an animation with 20 steaps. For each step, it calculates 
- a percentage for the specific step. It then generates a random clip
- box to be used for the random glitch effect. Also adds a very subtle
- skew to change the 'thickness' of the glitch.*/
+
 @keyframes glitch-anim {
   0% {
     clip: rect(7px, 9999px, 59px, 0);
@@ -274,4 +290,3 @@
     transform: skew(1deg);
   }
 }
-
