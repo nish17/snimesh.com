@@ -17,12 +17,11 @@ const Home = () => {
           <span>
             <Typical
               loop={Infinity}
-              wrapper='b'
               steps={[
                 'Full Stack Web Developer.',
                 1000,
                 '',
-                'Full Stack Chatbot/Voice Developer.',
+                'Full Stack Voice Developer.',
                 1000,
                 '',
                 'Tech speaker.',
