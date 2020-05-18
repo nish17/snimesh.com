@@ -6,7 +6,7 @@ const Home = () => {
     <div className='child-center'>
       <div className='text-center'>
         <h5>Hello there!</h5>
-        <h1 class='glitch' data-text="I'm Nimesh Solanki" >
+        <h1 className='glitch' data-text="I'm Nimesh Solanki" >
             I'm Nimesh Solanki
         </h1>
         <h5>
