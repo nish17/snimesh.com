@@ -4,6 +4,20 @@ body {
   font-family: 'Roboto Mono';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#home, #about {
+  width: 100vw;
+  height: 100vh;
+}
+
+.dark-mode {
+  background-color: #4e4e4c;
+  filter: invert(1) heu-rotate(180deg);
+}
+
 .page-border {
   border: 30px solid #f26b38;
   width: 100%;
@@ -15,6 +29,7 @@ body {
   height: 100vh;
   position: fixed;
   left: 0;
+  z-index: 1000;
 }
 
 .right-line {
@@ -22,6 +37,7 @@ body {
   height: 100vh;
   position: fixed;
   right: 0;
+  z-index: 1000;
 }
 
 .top-line {
@@ -49,7 +65,7 @@ body {
 
 .text-center {
   text-align: center !important;
-  font-size: 25px;
+  font-size: 2rem;
   width: 100%;
 }
 
@@ -59,8 +75,8 @@ ul {
 }
 span > a {
   float: right;
-  margin-left: 30px;
-  margin-right: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   color: black;
 }
 
@@ -73,38 +89,104 @@ a {
   text-decoration: none !important;
 }
 
+.about-desc {
+  /* justify-content: center; */
+  align-self: center;
+}
+
 .nav {
   font-family: 'Roboto Mono';
+  background-color: white;
+  width: 96%;
+  float: right;
   color: inherit;
   font-size: 16px;
-  float: right;
-  margin-top: 80px;
-  margin-right: 6%;
+  margin-top: 11vh;
+  text-align: right;
+  margin-inline-start: 3em;
+  margin-inline-end: 3em;
 }
 
 .container {
-  /* margin-top: 100px; */
-  display: inline-grid;
-  padding-top: 1.5%;
-  position: absolute;
-  width: 100%;
+  padding-top: 4.5%;
   height: 100vh;
-  margin-top: 50%;
-  display: block;
+  text-align: center;
+}
+/* header {
+  background: #fff; 
+  width: 100%;
+  position: fixed;
+  margin-inline-start: 0em;
+  margin-inline-end: 0em;
+} */
+
+.desc-container {
+  padding-top: 4.5%;
+  height: 100vh;
+  text-align: left;
+  margin-inline-start: 30rem;
+  margin-inline-end: 30rem;
+}
+
+.about-title {
+  font-family: 'Roboto Mono';
+  font-size: 1rem;
+  text-align: right;
+  text-underline-position: below;
+  padding-left: 18%;
+  width: 100%;
+  width: max-content;
 }
 
 .my-pic {
-  height: 20vmin;
+  /* height: 19vmin; */
   border-radius: 50%;
-  margin-top: 5%;
-  display: block;
-  margin: auto;
-  align-content: center;
+  float: left;
+  margin-left: 18%;
+  width: 100px;
+  height: 100px;
+  /* margin-right: 5%; */
+}
+
+.content {
+  width: fit-content;
+  /* display: inline; */
+  /* margin-left: 4%; */
+  padding-left: 2%;
+  margin-inline-start: 30rem;
+  margin-inline-end: 30rem;
 }
 
 .about-me {
   font-family: 'Roboto Mono';
   font-size: small;
+  /* margin-left: 20%; */
+}
+
+.links {
+  /* margin-left: 10%; */
+  /* margin: 2%; */
+  padding-top: 3%;
+}
+
+.links > a{
+  /* margin-left: 120px; */
+  background-color: #f26b38;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #fff;
+  /* border-radius: 8%; */
+}
+
+
+.links > a:hover {
+  background-color: white;
+  color: #f26b38;
+  border: 1px solid #f26b38;
+
 }
 
 /* ====== */
@@ -116,7 +198,7 @@ a {
   color: black;
   font-family: 'Roboto Mono';
   font-weight: bold;
-  font-size: 60px;
+  font-size: 4rem;
   animation: glitch-skew 1s infinite linear alternate-reverse;
 }
 .glitch::before {
