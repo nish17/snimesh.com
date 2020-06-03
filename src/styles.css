@@ -8,7 +8,8 @@ html {
   scroll-behavior: smooth;
 }
 
-#home, #about {
+#home,
+#about {
   width: 100vw;
   height: 100vh;
 }
@@ -108,7 +109,7 @@ a {
 }
 
 .container {
-  padding-top: 4.5%;
+  padding-top: 2.5%;
   height: 100vh;
   text-align: center;
 }
@@ -121,7 +122,7 @@ a {
 } */
 
 .desc-container {
-  padding-top: 4.5%;
+  padding-top: 2.5%;
   height: 100vh;
   text-align: left;
   margin-inline-start: 30rem;
@@ -151,7 +152,7 @@ a {
 .content {
   width: fit-content;
   /* display: inline; */
-  /* margin-left: 4%; */
+  /* margin-left: 2%; */
   padding-left: 2%;
   margin-inline-start: 30rem;
   margin-inline-end: 30rem;
@@ -169,7 +170,7 @@ a {
   padding-top: 3%;
 }
 
-.links > a{
+.links > a {
   /* margin-left: 120px; */
   background-color: #f26b38;
   border: none;
@@ -181,12 +182,128 @@ a {
   /* border-radius: 8%; */
 }
 
+.links > a:hover {
+  background-color: white;
+  color: #f26b38;
+  border: 1px solid #f26b38;
+}
+
+.new-sec {
+  width: 100%;
+  position: relative;
+  /* display: block; */
+}
+
+.clear-float {
+  clear: both;
+}
+
+.float-right {
+  float: right;
+  width: fit-content;
+}
+
+.float-left {
+  float: left;
+  width: fit-content;
+}
+
+.card-title {
+  width: fit-content;
+}
+.fit {
+  margin-left: 30px;
+  width: 40%;
+  height: fit-content;
+}
+.card-desc {
+  width: 45%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+  grid-template-rows: 70px 100px 70px 70px;
+  /* repeat(3, minmax(1px, 0.1fr)); */
+  height: 50%;
+}
+
+.about-title-1 {
+  grid-row: 1/2;
+  grid-column: 2/-2;
+  align-content: end;
+  justify-content: end;
+}
+
+/* .about-title-1 > h3 {
+} */
+
+.img {
+  grid-row: 2 / -1;
+  grid-column: 2/3;
+  justify-content: end;
+  justify-self: normal;
+  /* justify-items: right; */
+}
+
+.my-pic-1 {
+  position: relative;
+  border-radius: 50%;
+  height: 14rem;
+  /* width: inherit; */
+}
+.content-1 {
+  grid-row: 2/4;
+  grid-column: 3/-2;
+  justify-content: center;
+  align-content: center;
+  line-height: 35px;
+}
+
+.button-1 {
+  grid-row: 4/-1;
+  grid-column: 3/-2;
+  
+  /* justify-content: center; */
+}
+
+/* 
+.links > a {
+  margin-left: 120px;
+  background-color: #f26b38;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 8%;
+}
 
 .links > a:hover {
   background-color: white;
   color: #f26b38;
   border: 1px solid #f26b38;
+}
+*/
 
+.button-1 > a {
+  background-color: #f26b38;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #fff;
+}
+
+.button-1 > a:hover {
+  /* margin: 10%; */
+  /* align-items: center; */
+  background-color: white;
+  color: #f26b38;
+  border: 1px solid #f26b38;
+  /* padding-top: 10%; */
 }
 
 /* ====== */
