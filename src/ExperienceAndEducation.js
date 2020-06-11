@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Experience = () => {
+const ExperienceAndEducation = () => {
   return (
     <div class='col-2-container'>
       <div class='experience'>
