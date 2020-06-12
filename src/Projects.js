@@ -106,14 +106,7 @@ const Projects = () => {
             >
               <img className='tech-icons' src={MomentIcon} />
             </a>
-            {/* <a
-              className='tech-icons-container'
-              title='Chrome Dev Tools'
-              href='https://developers.google.com/web/tools/chrome-devtools'
-            >
-              <img className='tech-icons' src={chromeDevIcon} />
-            </a> */}
-            <br />
+            {/* <br /> */}
           </div>
           <div className='project-desc-1'>
             Voice App for Google Assistant which tells the students about their
@@ -121,7 +114,52 @@ const Projects = () => {
           </div>
           <img className='project-img-2' src={AoGIcon} />
         </div>
-        <div className='project-3'>3</div>
+        <div className='project-3'>
+          <div className='project-title-1'>
+            <a href='https://github.com/nish17/GDG-Ahmedabad-Action'>
+              <h4>GDG Ahmedabad</h4>
+            </a>
+          </div>
+          <div className='tech-stack-1'>
+            <h6>VUI:</h6>
+            <a
+              className='tech-icons-container'
+              title='Google Assistant'
+              href='https://developers.google.com/assistant'
+            >
+              <img className='tech-icons' src={AoGIcon} />
+            </a>
+            <a
+              className='tech-icons-container'
+              title='DialogFlow'
+              href='https://dialogflow.com/'
+            >
+              <img className='tech-icons' src={DialogFlowIcon} />
+            </a>
+            <h6>Backend:</h6>
+            <a
+              className='tech-icons-container'
+              title='Node.js'
+              href='https://nodejs.org/'
+            >
+              <img className='tech-icons' src={nodeIcon} />
+            </a>
+            <a
+              className='tech-icons-container'
+              title='Firebase Cloud Functions'
+              href='https://firebase.google.com/docs/functions'
+            >
+              <img className='tech-icons' src={FirebaseIcon} />
+            </a>
+          </div>
+          <div className='project-desc-1'>
+            Voice app that tells the users all the information about Google
+            Developers Group, DevFests and core-committe members of GDG
+            Ahmedabad. It also shows information about the past meetups, shows
+            the schedule of all talks.
+          </div>
+          <img className='project-img-2' src={AoGIcon} />
+        </div>
         <div className='project-4'>4</div>
       </div>
     </div>
