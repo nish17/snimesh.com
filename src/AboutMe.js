@@ -49,7 +49,7 @@ const AboutMe = () => {
       </div>
       <div>
         <ExperienceAndEducation />
-        <div className='gh-card' >
+        <div className='gh-card'>
           <UserCard username='nish17' />
         </div>
       </div>
