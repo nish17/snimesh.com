@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import Home from './Home';
 import Navbar from './Navbar';
 import AboutMe from './AboutMe';
-
+import Awards from './Awards';
 const App = () => {
   return (
     <div>
@@ -19,6 +19,10 @@ const App = () => {
 
       <section id='about'>
         <AboutMe />
+      </section>
+
+      <section id='awards'>
+        <Awards />
       </section>
     </div>
   );
