@@ -65,7 +65,7 @@ const ExperienceAndEducation = () => {
         <h5 className='small-box'>August 2016 - June 2020</h5>
           <div className='card-title-1'>
             <h4>
-              B.Tech in Information and Communication Technology
+              B.Tech in Information & Communication Technology
             </h4>
           </div>
           <div className='card-desc-1'>
