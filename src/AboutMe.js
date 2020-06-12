@@ -1,4 +1,7 @@
 import React from 'react';
+import { UserCard } from 'react-github-cards';
+import 'react-github-cards/dist/default.css';
+
 import Container from 'muicss/lib/react/container';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
@@ -8,7 +11,7 @@ import Col from 'muicss/lib/react/col';
 // import Col from 'react-bootstrap/Col'
 
 import ExperienceAndEducation from './ExperienceAndEducation';
-import GithubCard from './GithubCard';
+// import GithubCard from './GithubCard';
 const AboutMe = () => {
   return (
     <div>
@@ -43,10 +46,12 @@ const AboutMe = () => {
           {/* <a href='mailto:nimesh3536@gmail.com'>Email me</a> */}
           <a href='#Resume'>Checkout Resume</a>
         </div>
-        <GithubCard />
       </div>
       <div>
         <ExperienceAndEducation />
+        <div className='gh-card' >
+          <UserCard username='nish17' />
+        </div>
       </div>
     </div>
   );
