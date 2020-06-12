@@ -326,12 +326,18 @@ a {
   font-family: 'Roboto Mono';
   font-size: small;
 }
-
-.experience, 
 .education {
   padding-left: 15%;
   font-family: 'Roboto Mono';
   font-weight: bolder;
+}
+
+.experience {
+  padding-left: 15%;
+  font-family: 'Roboto Mono';
+  font-weight: bolder;
+  border-left: 1px solid #f26b38;
+  height: 69%;
 }
 
 .card-title-1 {
