@@ -9,6 +9,8 @@ import AoGIcon from './assets/AoG.png';
 import FirebaseIcon from './assets/firebase.png';
 import DialogFlowIcon from './assets/dialogflow.png';
 import MomentIcon from './assets/moment.png';
+import BixbyIcon from './assets/bixby.png';
+import jsIcon from './assets/js.png';
 
 const Projects = () => {
   return (
@@ -160,7 +162,36 @@ const Projects = () => {
           </div>
           <img className='project-img-2' src={AoGIcon} />
         </div>
-        <div className='project-4'>4</div>
+        <div className='project-4'>
+        <div className='project-title-1'>
+            <a href='https://github.com/nish17/GDG-Ahmedabad-Action'>
+              <h4>Data Structure Visualizer</h4>
+            </a>
+          </div>
+          <div className='tech-stack-1'>
+            <h6>VUI:</h6>
+            <a
+              className='tech-icons-container'
+              title='Samsung Bixby'
+              href='http://bixbydevelopers.com/'
+            >
+              <img className='tech-icons' src={BixbyIcon} />
+            </a>
+            <h6>Backend:</h6>
+            <a
+              className='tech-icons-container'
+              title='JavaScript'
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/'
+            >
+              <img className='tech-icons' src={jsIcon} />
+            </a>
+          </div>
+          <div className='project-desc-1'>
+            Voice app that tells the users all the information about Linear Data Structure, 
+            Non-Linear Data Structure. It also shows visual representation of all the data structures.
+          </div>
+          <img className='project-img-4' src={BixbyIcon} />
+        </div>
       </div>
     </div>
   );
