@@ -22,6 +22,10 @@ const App = () => {
         <AboutMe />
       </section>
 
+      <section id='awards'>
+        <Awards />
+      </section>
+
       <section id='projects'>
         <Projects />
       </section>
