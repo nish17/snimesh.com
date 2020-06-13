@@ -11,6 +11,7 @@ html {
 #home,
 #about,
 #projects {
+  position: relative;
   width: 100vw;
   height: 100vh;
 }
@@ -372,7 +373,8 @@ a {
 }
 
 .projects {
-  margin-top: 45%;
+  position: relative;
+  margin-top: 15%;
   margin-left: 10%;
   font-family: 'Roboto Mono';
 }
@@ -513,12 +515,13 @@ a {
   margin-top: 5%;
   font-family: 'Roboto Mono';
   grid-template-columns: repeat(2, 550px);
-  grid-template-rows: repeat(3, 300px);
+  grid-template-rows: repeat(3, 350px);
 }
 
 .award-1 {
   display: grid;
   grid-template-columns: 350px 200px;
+  /* padding:20px; */
   border-top: 5px solid #f26b38;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;

@@ -9,8 +9,8 @@ const Awards = () => {
       <div className='awards-container'>
         <div className='award-1'>
           <div className='award-left-side' >
-          <h2>Rising Star in Voice</h2>
-          <h4>Awarded by Inside Voice Podcast (VOICE Summit 2019)</h4>
+          <div>Rising Star in Voice</div>
+          <div>Awarded by Inside Voice Podcast (VOICE Summit 2019)</div>
           </div>
           <div className='award-right-side' >
           <img  className='award-img-1' src={VoiceAwards} />
