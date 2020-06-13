@@ -8,8 +8,9 @@ import chromeDevIcon from './assets/chrome-dev.png';
 import AoGIcon from './assets/AoG.png';
 import FirebaseIcon from './assets/firebase.png';
 import DialogFlowIcon from './assets/dialogflow.png';
-import MomentIcon from './assets/moment.png';
+import MomentIcon from './assets/momentjs.png';
 import BixbyIcon from './assets/bixby.png';
+import BixbyLogo from './assets/bixby.jpg';
 import jsIcon from './assets/js.png';
 
 const Projects = () => {
@@ -20,13 +21,13 @@ const Projects = () => {
         <div className='project-1'>
           <div className='project-title-1'>
             <a href='https://github.com/nish17/bigBasket-notifier'>
-              <h4>Big Basket Notifier</h4>
+              <div>Big Basket Notifier</div>
             </a>
           </div>
           <div className='tech-stack-1'>
-            <h6>Frontend:</h6>
+            <div className='tech-title' >Frontend:</div>
             N/A
-            <h6>Backend:</h6>
+            <div className='tech-title' >Backend:</div>
             <a
               className='tech-icons-container'
               title='Node.js'
@@ -67,11 +68,11 @@ const Projects = () => {
         <div className='project-2'>
           <div className='project-title-1'>
             <a href='https://github.com/nish17/scheduler'>
-              <h4>PDPU Scheduler</h4>
+              <div>PDPU Scheduler</div>
             </a>
           </div>
           <div className='tech-stack-1'>
-            <h6>VUI:</h6>
+          <div className='tech-title' >VUI:</div>
             <a
               className='tech-icons-container'
               title='Google Assistant'
@@ -86,7 +87,7 @@ const Projects = () => {
             >
               <img className='tech-icons' src={DialogFlowIcon} />
             </a>
-            <h6>Backend:</h6>
+            <div className='tech-title' >Backend:</div>
             <a
               className='tech-icons-container'
               title='Node.js'
@@ -119,11 +120,11 @@ const Projects = () => {
         <div className='project-3'>
           <div className='project-title-1'>
             <a href='https://github.com/nish17/GDG-Ahmedabad-Action'>
-              <h4>GDG Ahmedabad</h4>
+              <div>GDG Ahmedabad</div>
             </a>
           </div>
           <div className='tech-stack-1'>
-            <h6>VUI:</h6>
+          <div className='tech-title' >VUI:</div>
             <a
               className='tech-icons-container'
               title='Google Assistant'
@@ -138,7 +139,7 @@ const Projects = () => {
             >
               <img className='tech-icons' src={DialogFlowIcon} />
             </a>
-            <h6>Backend:</h6>
+            <div className='tech-title' >Backend:</div>
             <a
               className='tech-icons-container'
               title='Node.js'
@@ -155,39 +156,37 @@ const Projects = () => {
             </a>
           </div>
           <div className='project-desc-1'>
-            Voice app that tells the users all the information about Google
-            Developers Group, DevFests and core-committe members of GDG
-            Ahmedabad. It also shows information about the past meetups, shows
-            the schedule of all talks.
+            Voice app that gives the information about GDG, DevFests and core-committe members of GDG
+            Ahmedabad. It also shows information about the schedule of all talks.
           </div>
           <img className='project-img-2' src={AoGIcon} />
         </div>
         <div className='project-4'>
         <div className='project-title-1'>
-            <a href='https://github.com/nish17/GDG-Ahmedabad-Action'>
-              <h4>Data Structure Visualizer</h4>
+            <a href='https://github.com/nish17/bixby-DataStructure-Visualizer'>
+              <div>DataStructure Visualizer</div>
             </a>
           </div>
           <div className='tech-stack-1'>
-            <h6>VUI:</h6>
+          <div className='tech-title' >VUI:</div>
             <a
               className='tech-icons-container'
               title='Samsung Bixby'
               href='http://bixbydevelopers.com/'
             >
-              <img className='tech-icons' src={BixbyIcon} />
+              <img className='tech-icons' src={BixbyLogo} />
             </a>
-            <h6>Backend:</h6>
+            <div className='tech-title' >Backend:</div>
             <a
               className='tech-icons-container'
-              title='JavaScript'
-              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/'
+              title='Node.js'
+              href='https://nodejs.org/'
             >
-              <img className='tech-icons' src={jsIcon} />
+              <img className='tech-icons' src={nodeIcon} />
             </a>
           </div>
           <div className='project-desc-1'>
-            Voice app that tells the users all the information about Linear Data Structure, 
+            Voice app that gives the information about Linear Data Structure, 
             Non-Linear Data Structure. It also shows visual representation of all the data structures.
           </div>
           <img className='project-img-4' src={BixbyIcon} />
