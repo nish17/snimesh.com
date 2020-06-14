@@ -1,6 +1,4 @@
 import React from 'react';
-import { UserCard } from 'react-github-cards';
-import 'react-github-cards/dist/default.css';
 
 import Container from 'muicss/lib/react/container';
 import Row from 'muicss/lib/react/row';
@@ -11,12 +9,12 @@ import Col from 'muicss/lib/react/col';
 // import Col from 'react-bootstrap/Col'
 
 import ExperienceAndEducation from './ExperienceAndEducation';
-// import GithubCard from './GithubCard';
+import GithubCard from './GithubCard';
 const AboutMe = () => {
   return (
     <div>
       <div className='grid-container'>
-        <div class='about-title-1'>
+        <div className='about-title-1'>
           <h3>About</h3>
         </div>
         <div className='img'>
@@ -50,7 +48,7 @@ const AboutMe = () => {
       <div>
         <ExperienceAndEducation />
         <div className='gh-card'>
-          <UserCard username='nish17' />
+          <GithubCard />
         </div>
       </div>
     </div>
