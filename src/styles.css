@@ -538,7 +538,7 @@ a {
 }
 .award-3 {
   display: grid;
-  grid-template-columns: 400px 150px;
+  grid-template-columns: 350px 400px;
   border-top: 5px solid #f26b38;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
@@ -546,7 +546,7 @@ a {
 }
 .award-4 {
   display: grid;
-  grid-template-columns: 400px 150px;
+  grid-template-columns: 350px 400px;
   border-top: 5px solid #f26b38;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
@@ -554,7 +554,7 @@ a {
 }
 .award-5 {
   display: grid;
-  grid-template-columns: 400px 150px;
+  grid-template-columns: 350px 400px;
   border-top: 5px solid #f26b38;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
@@ -562,7 +562,7 @@ a {
 }
 .award-6 {
   display: grid;
-  grid-template-columns: 400px 150px;
+  grid-template-columns: 350px 400px;
   border-top: 5px solid #f26b38;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
@@ -620,6 +620,22 @@ figure:hover .show-img-1 {
   padding: 10%;
   width: 350px;
   height: 280px;
+}
+
+.award-img-3 {
+  /* margin: 15%; */
+  margin-top: 20%;
+  margin-left: 5%;
+  /* padding: 15%; */
+  width: 350px;
+  height: 150px;
+}
+
+.award-img-4 {
+  margin-left: 3%;
+  margin-top: 12%;
+  width: 380px;
+  height: 250px;
 }
 
 .award-title {
