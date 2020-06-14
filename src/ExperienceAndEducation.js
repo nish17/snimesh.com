@@ -2,8 +2,8 @@ import React from 'react';
 
 const ExperienceAndEducation = () => {
   return (
-    <div class='col-2-container'>
-      <div class='experience'>
+    <div className='col-2-container'>
+      <div className='experience'>
         <h3>Experience</h3>
         <article>
           <h5 className='small-box'>January 2020 - April 2020</h5>
@@ -59,7 +59,7 @@ const ExperienceAndEducation = () => {
           </div>
         </article>
       </div>
-      <div class='education'>
+      <div className='education'>
         <h3>Education</h3>
         <article className='exp-1'>
         <h5 className='small-box'>August 2016 - June 2020</h5>
