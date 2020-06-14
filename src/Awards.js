@@ -6,6 +6,8 @@ import RisingStar from './assets/risingStar.png';
 import bixbyPD from './assets/bixbyPD.png';
 import devfest18 from './assets/DevFest2018.jpeg';
 import devfest19 from './assets/DevFest2019.jpg';
+import alexawksp from './assets/AlexaWksp.jpeg';
+import alexa from './assets/alexa.png';
 
 const Awards = () => {
   return (
@@ -28,12 +30,12 @@ const Awards = () => {
                 </a>
               </div>
               <div>
-                Podcast{' '}
+                Link:{' '}
                 <a
                   href='https://podcasts.apple.com/us/podcast/developing-voice-skills-as-a-student/id1447407838?i=1000447426808'
                   target='_blank'
                 >
-                  Link
+                  Podcast
                 </a>
               </div>
             </div>
@@ -82,6 +84,10 @@ const Awards = () => {
                   SpeakerDeck
                 </a>
               </div>
+              <div>
+                Link: {' '}
+                <a href='https://youtu.be/JMbSDu80TlU' target='_blank'>Recorded Session</a>
+              </div>
             </div>
           </div>
           <div className='award-right-side'>
@@ -109,7 +115,27 @@ const Awards = () => {
             <img className='award-img-4' src={devfest18} />
           </div>
         </div>
-        <div className='award-6'>6</div>
+        <div className='award-6'>
+        <div className='award-left-side'>
+            <div className='award-title'>Conducted Workshop </div>
+            <div className='award-program'>Alexa Skill Development</div>
+            <div className='award-org'>PDPU's TechFest 2019</div>
+            <div className='award-link'>
+              <div>
+                Link:{' '}
+                <a
+                  href='https://speakerdeck.com/nimeshs17/alexa-workshop-pdpu-2019'
+                  target='_blank'
+                >
+                  SpeakerDeck
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className='award-right-side'>
+            <img className='award-img-5' src={alexa} />
+          </div>
+        </div>
       </div>
     </div>
   );
