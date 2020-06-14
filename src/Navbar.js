@@ -10,7 +10,7 @@ const NavBar = () => {
             <a href='mailto:nimesh3536@gmail.com'>Contact</a>
           </span>
           <span>
-            <a href='#awards'>Portfolio</a>
+            <a href='#awards'>Awards</a>
           </span>
           <span>
             <a href='#about'>Resume</a>
