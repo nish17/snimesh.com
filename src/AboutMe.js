@@ -10,6 +10,8 @@ import Col from 'muicss/lib/react/col';
 
 import ExperienceAndEducation from './ExperienceAndEducation';
 import GithubCard from './GithubCard';
+import StackOverFlowCard from './StackOverFlowCard';
+
 const AboutMe = () => {
   return (
     <div>
@@ -47,8 +49,15 @@ const AboutMe = () => {
       </div>
       <div>
         <ExperienceAndEducation />
-        <div className='gh-card'>
-          <GithubCard />
+        <div className='cards-container'>
+          <div className='cards-grid'>
+            <div className='gh-card'>
+              <GithubCard />
+            </div>
+            <div className='so-card'>
+              <StackOverFlowCard />
+            </div>
+          </div>
         </div>
       </div>
     </div>
