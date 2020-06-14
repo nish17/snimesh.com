@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import AboutMe from './AboutMe';
 import Awards from './Awards';
 import Projects from './Projects';
+import TechStack from './TechStack';
 const App = () => {
   return (
     <div>
@@ -20,6 +21,10 @@ const App = () => {
 
       <section id='about'>
         <AboutMe />
+      </section>
+
+      <section id='tech-stack'>
+        <TechStack />
       </section>
 
       <section id='awards'>

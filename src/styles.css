@@ -519,6 +519,7 @@ a {
 
 .awards {
   margin-top: 45%;
+  display: relative;
   margin-left: 5%;
 }
 
@@ -674,6 +675,12 @@ figure:hover .show-img-1 {
 
 .award-link > div {
   margin-top: 10%;
+}
+
+.tech-stack-container {
+  display: relative;
+  width: 100vw;
+  height: 100px;
 }
 
 /* ====== */
