@@ -2,14 +2,17 @@ import React, { useEffect } from 'react';
 
 const TechStack = () => {
   return (
-    <div class='tech-stack-container'>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
+    <div className='tech-stack-comp' >
+      <div className='tech-stack-container'>
+        <div>MongoDB</div>
+        <div>Express</div>
+        <div>React</div>
+        <div>Node.js</div>
+        <div>Docker</div>
+        <div>Amazon Alexa</div>
+        <div>Google Assistant</div>
+        <div>Samsung Bibxy</div>
+      </div>
     </div>
   );
 };
