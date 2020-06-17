@@ -59,6 +59,12 @@ html {
   position: fixed;
 }
 
+.main-container {
+  width: 50%;
+  margin: 0 auto;
+  border: 2px solid magenta;
+}
+
 .child-center {
   position: absolute;
   top: 50%;
@@ -72,18 +78,36 @@ html {
   width: 100%;
 }
 
-ul {
-  list-style-type: none;
-  /* margin-top: 12px; */
+#header {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  top: 3%;
+  right: 0;
+  z-index: 100;
 }
-span > a {
+
+#nav-bar {
+  margin-top: 20px;
+}
+
+#nav-bar li {
+  display: inline;
   float: right;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-right: 50px;
+  list-style-type: none;
+}
+
+.nav-link a {
+  float: left;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
   color: black;
 }
 
-span > a:hover {
+li > a:hover {
   color: #f26b38;
 }
 
@@ -97,17 +121,10 @@ a {
   align-self: center;
 }
 
-.nav {
-  font-family: 'Roboto Mono';
-  background-color: white;
-  /* width: 100%; */
-  display: flex;
-  float: right;
-  color: inherit;
-  font-size: 16px;
-  margin-top: 11vh;
-  padding-right: 5%;
-  /* position: fixed; */
+.nav ul {
+  padding-right: 20px;
+  margin-right: 100px;
+  text-align: right;
 }
 
 .container {
@@ -115,13 +132,6 @@ a {
   height: 100vh;
   text-align: center;
 }
-/* header {
-  background: #fff; 
-  width: 100%;
-  position: fixed;
-  margin-inline-start: 0em;
-  margin-inline-end: 0em;
-} */
 
 .desc-container {
   padding-top: 2.5%;
@@ -373,7 +383,7 @@ a {
 .cards-grid {
   display: grid;
   grid-gap: 100px;
-  grid-template-columns: repeat(2,500px);
+  grid-template-columns: repeat(2, 500px);
   height: 250px;
 }
 

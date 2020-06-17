@@ -14,18 +14,19 @@ const App = () => {
       <div className='left-line'></div>
       <div className='right-line'></div>
       <div className='bottom-line'></div>
+      <div className='main-container' >
       <section id='home'>
         <Navbar />
-        <Home />
+        {/* <Home /> */}
       </section>
 
       <section id='about'>
         <AboutMe />
       </section>
 
-      <section id='tech-stack'>
+      {/* <section id='tech-stack'>
         <TechStack />
-      </section>
+      </section> */}
 
       <section id='awards'>
         <Awards />
@@ -34,6 +35,7 @@ const App = () => {
       <section id='projects'>
         <Projects />
       </section>
+    </div>
     </div>
   );
 };
