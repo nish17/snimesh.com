@@ -6,7 +6,6 @@ import StackOverFlowCard from './StackOverFlowCard';
 const AboutMe = () => {
   return (
     <div className='aboutMe-container'>
-      <div className='aboutMe'>
         <div className='grid-container'>
           <div className='about-title-1'>
             <h3>About</h3>
@@ -38,14 +37,13 @@ const AboutMe = () => {
             </p>
           </div>
           <div className='button-1'>
-            {/* <a href='mailto:nimesh3536@gmail.com'>Email me</a> */}
+            <a href='mailto:nimesh3536@gmail.com'>Email me</a>
             <a href='#Resume'>Checkout Resume</a>
           </div>
         </div>
-      </div>
-      <div>
+      <div className='exp-and-edu-1'>
         <ExperienceAndEducation />
-        <div className='cards-container'>
+        {/* <div className='cards-container'>
           <div className='cards-grid'>
             <div className='gh-card'>
               <GithubCard />
@@ -54,7 +52,7 @@ const AboutMe = () => {
               <StackOverFlowCard />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

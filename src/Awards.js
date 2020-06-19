@@ -12,7 +12,7 @@ import alexa from './assets/alexa.png';
 const Awards = () => {
   return (
     <div className='awards'>
-      <h3>Awards</h3>
+      <h3>Awards & Achievements</h3>
       <div className='awards-container'>
         <div className='award-1'>
           <div className='award-left-side'>

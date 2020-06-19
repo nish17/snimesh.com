@@ -14,6 +14,9 @@ const NavBar = () => {
             <li className='nav-link'>
               <a href='#about'>Resume</a>
             </li>
+            <li className='nav-link'>
+              <a href=''>Home</a>
+            </li>
           </ul>
         </nav>
     </header>

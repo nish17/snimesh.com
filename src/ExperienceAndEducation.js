@@ -9,7 +9,7 @@ const ExperienceAndEducation = () => {
           <h5 className='small-box'>January 2020 - April 2020</h5>
           <div className='card-title-1'>
             <h4>
-              SDE Intern -{" "}
+              SDE Intern -{' '}
               <a href='https://tapchief.com' target='_blank'>
                 TapChief
               </a>
@@ -27,7 +27,7 @@ const ExperienceAndEducation = () => {
           <h5 className='small-box'>June 2019 - July 2019</h5>
           <div className='card-title-1'>
             <h4>
-              SDE Intern -{" "}
+              SDE Intern -{' '}
               <a href='https://winimy.ai' target='_blank'>
                 Winimy AI
               </a>
@@ -62,15 +62,17 @@ const ExperienceAndEducation = () => {
       <div className='education'>
         <h3>Education</h3>
         <article className='exp-1'>
-        <h5 className='small-box'>August 2016 - June 2020</h5>
+          <h5 className='small-box'>August 2016 - June 2020</h5>
           <div className='card-title-1'>
-            <h4>
-              B.Tech in Information & Communication Technology
-            </h4>
+            <h4>B.Tech in Information & Communication Technology</h4>
           </div>
           <div className='card-desc-1'>
             <p>
-              Batch 2016, <a href='http://pdpu.ac.in/' target='_blank'> Pandit Deendayal Petroleum Univeristy, Gandhinagar</a>
+              Batch 2016,{' '}
+              <a href='http://pdpu.ac.in/' target='_blank'>
+                {' '}
+                Pandit Deendayal Petroleum Univeristy, Gandhinagar
+              </a>
             </p>
           </div>
         </article>

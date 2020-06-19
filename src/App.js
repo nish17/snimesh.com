@@ -17,7 +17,7 @@ const App = () => {
       <div className='main-container' >
       <section id='home'>
         <Navbar />
-        {/* <Home /> */}
+        <Home />
       </section>
 
       <section id='about'>
