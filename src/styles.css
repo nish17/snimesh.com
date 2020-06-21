@@ -51,7 +51,7 @@ html {
 
 .top-line {
   border-top: 30px solid #f26b38;
-  width: 100vw;
+  width: 100%;
   top: 0;
   z-index: 1000;
   position: sticky;
@@ -59,7 +59,7 @@ html {
 
 .bottom-line {
   border-bottom: 30px solid #f26b38;
-  width: 100vw;
+  width: 100%;
   bottom: 0;
   z-index: 1000;
   position: fixed;
@@ -121,110 +121,6 @@ li > a:hover {
   color: #f26b38;
 }
 
-.about-desc {
-  align-self: center;
-}
-
-.container {
-  padding-top: 2.5%;
-  height: 100vh;
-  text-align: center;
-}
-
-.desc-container {
-  padding-top: 2.5%;
-  height: 100vh;
-  text-align: left;
-  margin-inline-start: 30rem;
-  margin-inline-end: 30rem;
-}
-
-.about-title {
-  font-family: 'Roboto Mono';
-  font-size: 1rem;
-  text-align: right;
-  text-underline-position: below;
-  padding-left: 18%;
-  width: 100%;
-  width: max-content;
-}
-
-.my-pic {
-  /* height: 19vmin; */
-  border-radius: 50%;
-  float: left;
-  margin-left: 18%;
-  width: 100px;
-  height: 100px;
-  /* margin-right: 5%; */
-}
-
-.content {
-  width: fit-content;
-  /* display: inline; */
-  /* margin-left: 2%; */
-  padding-left: 2%;
-  margin-inline-start: 30rem;
-  margin-inline-end: 30rem;
-}
-
-.about-me {
-  font-family: 'Roboto Mono';
-  font-size: small;
-}
-
-.links {
-  padding-top: 3%;
-}
-
-.links > a {
-  background-color: #f26b38;
-  border: none;
-  color: white;
-  padding: 8px;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid #fff;
-}
-
-.links > a:hover {
-  background-color: white;
-  color: #f26b38;
-  border: 1px solid #f26b38;
-}
-
-.new-sec {
-  width: 100%;
-  position: relative;
-  /* display: block; */
-}
-
-.clear-float {
-  clear: both;
-}
-
-.float-right {
-  float: right;
-  width: fit-content;
-}
-
-.float-left {
-  float: left;
-  width: fit-content;
-}
-
-.card-title {
-  width: fit-content;
-}
-.fit {
-  margin-left: 30px;
-  width: 40%;
-  height: fit-content;
-}
-.card-desc {
-  width: 45%;
-}
-
 .aboutMe-container {
   position: relative;
   top: 10%;
@@ -282,25 +178,19 @@ li > a:hover {
 }
 
 .button-1 > a:hover {
-  /* margin: 10%; */
-  /* align-items: center; */
   background-color: white;
   color: #f26b38;
   border: 1px solid #f26b38;
-  /* padding-top: 10%; */
 }
 
-.exp-and-edu {
-  position: relative;
-  top: 5%;
+.exp-and-edu-1 {
+  margin-top: 10%;
 }
 
 .col-2-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  position: relative;
-  top: 125%;
 }
 
 .small-box {
@@ -321,7 +211,6 @@ li > a:hover {
   font-family: 'Roboto Mono';
   font-weight: bolder;
   border-left: 1px solid #f26b38;
-  /* height: 69%; */
 }
 
 .experience > h3,
@@ -347,7 +236,6 @@ li > a:hover {
 }
 
 .cards-container {
-  /* margin-left: 20%; */
   position: relative;
   top: 395%;
   bottom: 0%;
@@ -382,17 +270,10 @@ li > a:hover {
   height: 100vh;
   grid-gap: 2%;
   margin-top: 5%;
-  /* width: 75%; */
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-template-rows: repeat(2, 350px);
-  /* position: relative; */
-  /* top: 150%; */
-  /* bottom: 1px; */
 }
 
-/* [class*='project-'] {
-  width: 350px;
-} */
 
 .project-1 {
   grid-row: 1/2;
