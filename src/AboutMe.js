@@ -43,7 +43,7 @@ const AboutMe = () => {
         </div>
       <div className='exp-and-edu-1'>
         <ExperienceAndEducation />
-        {/* <div className='cards-container'>
+        <div className='cards-container'>
           <div className='cards-grid'>
             <div className='gh-card'>
               <GithubCard />
@@ -52,7 +52,7 @@ const AboutMe = () => {
               <StackOverFlowCard />
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

@@ -11,7 +11,6 @@ import DialogFlowIcon from './assets/dialogflow.png';
 import MomentIcon from './assets/momentjs.png';
 import BixbyIcon from './assets/bixby.png';
 import BixbyLogo from './assets/bixby.jpg';
-import jsIcon from './assets/js.png';
 
 const Projects = () => {
   return (
