@@ -5,13 +5,12 @@ import twilioIcon from './assets/twilio.png';
 import awsIcon from './assets/aws.png';
 import bbIcon from './assets/BigBasketIcon.png';
 import chromeDevIcon from './assets/chrome-dev.png';
-import AoGIcon from './assets/AoG.png';
 import FirebaseIcon from './assets/firebase.png';
 import DialogFlowIcon from './assets/dialogflow.png';
 import MomentIcon from './assets/momentjs.png';
 import BixbyIcon from './assets/bixby.png';
 import BixbyLogo from './assets/bixby.jpg';
-
+import AoG from './assets/AoG.gif';
 const Projects = () => {
   return (
     <div className='projects'>
@@ -77,7 +76,7 @@ const Projects = () => {
               title='Google Assistant'
               href='https://developers.google.com/assistant'
             >
-              <img className='tech-icons' src={AoGIcon} />
+              <img className='tech-icons' src={AoG} />
             </a>
             <a
               className='tech-icons-container'
@@ -114,7 +113,7 @@ const Projects = () => {
             Voice App for Google Assistant which tells the students about their
             day to day schedule including their lectures and labs.
           </div>
-          <img className='project-img-2' src={AoGIcon} />
+          <img className='project-img-2' src={AoG} />
         </div>
         <div className='project-3'>
           <div className='project-title-1'>
@@ -129,7 +128,7 @@ const Projects = () => {
               title='Google Assistant'
               href='https://developers.google.com/assistant'
             >
-              <img className='tech-icons' src={AoGIcon} />
+              <img className='tech-icons' src={AoG} />
             </a>
             <a
               className='tech-icons-container'
@@ -158,7 +157,7 @@ const Projects = () => {
             Voice app that gives the information about GDG, DevFests and core-committe members of GDG
             Ahmedabad. It also shows information about the schedule of all talks.
           </div>
-          <img className='project-img-2' src={AoGIcon} />
+          <img className='project-img-2' src={AoG} />
         </div>
         <div className='project-4'>
         <div className='project-title-1'>
