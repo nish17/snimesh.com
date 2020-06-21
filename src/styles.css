@@ -260,17 +260,23 @@ li > a:hover {
 
 .projects {
   position: relative;
-  margin-left: 2%;
+  /* margin-left: 2%; */
   font-family: 'Roboto Mono';
-  margin-top: 2%;
+  /* margin-top: 2%; */
+  margin: 2% 0 2% 2%;
 }
 
 .projects-container {
   display: grid;
-  height: 100vh;
+  /* display: flex; */
+  /* flex: 50%; */
+  /* align-items: center; */
+  /* height: 100vh; */
   grid-gap: 2%;
   margin-top: 5%;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-template-rows: repeat(2, 350px);
 }
 
@@ -280,7 +286,7 @@ li > a:hover {
   grid-column: 1/2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 50px 170px 80px;
+  grid-template-rows: 50px minmax(50px, 1fr) 80px;
   border-top: 5px solid #f26b38;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
@@ -293,7 +299,7 @@ li > a:hover {
   grid-column: 2/3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 50px 170px 80px;
+  grid-template-rows: 50px minmax(50px, 1fr) 80px;
   border-top: 5px solid #f26b38;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
@@ -306,7 +312,7 @@ li > a:hover {
   grid-column: 1/2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 50px 170px 80px;
+  grid-template-rows: 50px minmax(50px, 1fr) 80px;
   border-top: 5px solid #f26b38;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
@@ -319,7 +325,7 @@ li > a:hover {
   grid-column: 2/3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 50px 170px 80px;
+  grid-template-rows: 50px minmax(50px, 1fr) 80px;
   border-top: 5px solid #f26b38;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
@@ -390,7 +396,6 @@ li > a:hover {
 
 .awards-container {
   display: grid;
-  height: 100vh;
   grid-gap: 2%;
   margin-top: 5%;
   font-family: 'Roboto Mono';
@@ -452,7 +457,7 @@ li > a:hover {
 .award-left-side {
   grid-column: 1/2;
   padding: 10%;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .award-right-side {
@@ -466,13 +471,14 @@ figure {
 
 .show-img-1 {
   display: none;
-  position: relative;
+  position: absolute;
   width: 300px;
-  height: 344px;
-  padding: 10%;
+  height: 290px;
+  padding: 5%;
   left: 0;
   bottom: 0;
   right: 0;
+  border-radius: 10%;
 }
 
 figure:hover img {
@@ -484,9 +490,11 @@ figure:hover .show-img-1 {
 }
 
 .award-img-1 {
-  padding: 10%;
+  padding: 5%;
+  margin-top: 1%;
   width: 300px;
-  height: 344px;
+  height: 290px;
+  border-radius: 10%;
 }
 
 .award-img-2 {
@@ -501,13 +509,17 @@ figure:hover .show-img-1 {
 }
 
 .award-img-4 {
-  margin-top: 12%;
+  margin-top: 10%;
   width: 290px;
   height: 250px;
+  border-radius: 10%;
+  object-fit: cover;
+  object-position: 35%;
 }
 
 .award-img-5 {
-  margin: 6%;
+  /* margin: 1%; */
+  margin-left: 1em;
 }
 
 .award-title {
@@ -526,7 +538,7 @@ figure:hover .show-img-1 {
 }
 
 .award-link > div {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .tech-stack-container {
