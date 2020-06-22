@@ -1,13 +1,11 @@
 import React from 'react';
 
 import VOICE from './assets/Voice.webp';
-import VoiceAwards from './assets/inside_voice_awards.png';
 import RisingStar from './assets/risingStar.png';
 import bixbyPD from './assets/bixbyPD.png';
-import devfest18 from './assets/DevFest2018.jpeg';
-import devfest19 from './assets/DevFest2019.jpg';
-import alexawksp from './assets/AlexaWksp.jpeg';
+import gdg from './assets/gdgahm.jpeg';
 import alexa from './assets/alexa.png';
+// import VoiceAwards from './assets/inside_voice_awards.png';
 
 const Awards = () => {
   return (
@@ -41,10 +39,7 @@ const Awards = () => {
             </div>
           </div>
           <div className='award-right-side'>
-            <figure>
-              <img className='award-img-1' src={VoiceAwards} />
-              <img className='show-img-1' src={RisingStar} />
-            </figure>
+              <img className='award-img-1' src={RisingStar} />
           </div>
         </div>
         <div className='award-2'>
@@ -91,7 +86,7 @@ const Awards = () => {
             </div>
           </div>
           <div className='award-right-side'>
-            <img className='award-img-4' src={devfest19} />
+            <img className='award-img-4' src={gdg} />
           </div>
         </div>
         <div className='award-5'>
@@ -112,7 +107,7 @@ const Awards = () => {
             </div>
           </div>
           <div className='award-right-side'>
-            <img className='award-img-4' src={devfest18} />
+            <img className='award-img-4' src={gdg} />
           </div>
         </div>
         <div className='award-6'>
