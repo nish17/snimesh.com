@@ -27,11 +27,6 @@ html {
   filter: invert(1) heu-rotate(180deg);
 }
 
-.page-border {
-  border: 30px solid #f26b38;
-  width: 100%;
-  height: 100vh;
-}
 
 .left-line {
   border-left: 30px solid #f26b38;
@@ -86,6 +81,17 @@ html {
   text-align: center !important;
   font-size: 2rem;
   width: 100%;
+  display: flex;
+  /* flex: 1; */
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.text-center > h1 {
+  display: flex;
+  /* flex: 1; */
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 #header {
@@ -185,6 +191,7 @@ li > a:hover {
 
 .exp-and-edu-1 {
   margin-top: 10%;
+  height: 100%;
 }
 
 .col-2-container {
@@ -236,26 +243,45 @@ li > a:hover {
 }
 
 .cards-container {
-  position: relative;
-  top: 395%;
-  bottom: 0%;
+  width: auto;
+  height: 100%;
 }
 
 .cards-grid {
-  display: grid;
-  grid-gap: 5%;
-  grid-template-columns: repeat(2, 500px);
-  height: 250px;
+  display: flex;
+  /* display: grid; */
+  /* grid-gap: 5%; */
+  /* grid-template-columns: repeat(2, 500px); */
+  /* height: 250px; */
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* height: 100%; */
+  justify-content: space-around;
 }
 
 .gh-card {
-  padding: 10%;
-  border: 3px dashed #f26b38;
+  /* display: inline; */
+  flex: 1;
+  margin: 2%;
+}
+.so-card {
+  /* display: inline; */
+  flex:1;
+  margin: 2%;
+}
+
+.gh-card {
+  padding: 2%;
+  border: 3px dashed #dfdfdf;
+  justify-self: flex-end;
+  align-self: center;
 }
 
 .so-card {
-  padding: 5%;
-  border: 3px dashed #f26b38;
+  padding: 2%;
+  border: 3px dashed #dfdfdf;
+  justify-self: flex-end;
+  align-self: flex-start;
 }
 
 .projects {
@@ -394,7 +420,6 @@ li > a:hover {
   position: relative;
   margin-left: 2%;
   margin-top: 2%;
-  display: none;
 }
 
 .awards-container {
@@ -550,6 +575,46 @@ figure:hover .show-img-1 {
   height: 100px;
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .left-line {
+    border-left: 10px solid #f26b38;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .right-line {
+    border-right: 10px solid #f26b38;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .top-line {
+    border-top: 10px solid #f26b38;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    position: sticky;
+  }
+  
+  .bottom-line {
+    border-bottom: 10px solid #f26b38;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+    position: fixed;
+  }
+}
+
+
+
 /* ====== */
 .glitch {
   text-transform: uppercase;
@@ -561,6 +626,7 @@ figure:hover .show-img-1 {
   font-weight: bold;
   font-size: 4rem;
   animation: glitch-skew 1s infinite linear alternate-reverse;
+  flex: 1;
 }
 .glitch::before {
   content: attr(data-text);
