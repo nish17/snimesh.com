@@ -6,15 +6,11 @@ const Home = () => {
     <div className='child-center'>
       <div className='text-center'>
         <h5>Hello there!</h5>
-        <h1 className='glitch' data-text="I'm Nimesh Solanki" >
+        <h1 className='glitch playful' data-text="I'm Nimesh Solanki" >
             I'm Nimesh Solanki
         </h1>
         <h5>
-          {/* <strong>
-
-          I'm a{' '}
-          </strong> */}
-          <span>
+          {/* <span> */}
             <Typical
               loop={Infinity}
               steps={[
@@ -32,7 +28,7 @@ const Home = () => {
                 '',
               ]}
             />
-          </span>
+          {/* </span> */}
         </h5>
       </div>
     </div>
