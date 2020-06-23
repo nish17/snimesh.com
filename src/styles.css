@@ -60,7 +60,7 @@ html {
 }
 
 .main-container {
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
   width: 75%;
   height: 100%;
@@ -90,7 +90,110 @@ html {
   font-size: 1.5rem;
 }
 
-#header {
+
+.nav {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 3%;
+  right: 0;
+  z-index: 100;
+  padding: 2%;
+  margin-right: 3rem;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  flex: 1;
+  /* display: inline-block; */
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav > .nav-links > a:hover {
+  color: #f26b38;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+
+  .nav {
+    top: 0;
+    margin: 10px 0 10px 10px;
+    padding: 5%;
+  }
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    margin-right: 15px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #000;
+    
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #fdfdfd;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    z-index: 2;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    margin: 2%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    z-index: 2;
+  }
+  .nav-links > .nav-collapse {
+
+    height: 0px;
+    /* overflow-y: auto; */
+  }
+}
+
+/* #header {
   background-color: rgb(255, 255, 255);
   position: fixed;
   height: 80px;
@@ -121,7 +224,7 @@ html {
 
 li > a:hover {
   color: #f26b38;
-}
+} */
 
 .aboutMe-container {
   position: relative;
@@ -719,7 +822,7 @@ figure:hover .show-img-1 {
 
 .playful {
   color: var(--text);
-  text-shadow: 6px 6px var(--shadow);
+  text-shadow: 0.3125vw 0.3125vw var(--shadow);
 }
 
 /* ====== */
