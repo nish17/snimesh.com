@@ -11,27 +11,16 @@ const NavBar = () => {
           <span></span>
         </label>
       </div>
-
-      <div className='nav-links'>
-        <a href='#home' data-toggle='#nav-check' data-target='.nav-collapse'>
-          Home
-        </a>
-        <a href='#about' data-toggle='#nav-check' data-target='.nav-collapse'>
-          Resume
-        </a>
-        <a href='#awards' data-toggle='#nav-check' data-target='.nav-collapse'>
-          Awards
-        </a>
-        <a href='#projects' data-toggle='#nav-check' data-target='.nav-collapse'>
-          Projects
-        </a>
-        <a
-          href='mailto:nimesh3536@gmail.com'
-          data-toggle='#nav-check'
-          data-target='.nav-collapse'
-        >
-          Contact
-        </a>
+      <div className='nav-collapse navbar-collapse collapse navbar-collapse collapse hide'>
+        <div className='nav-links'>
+        <ul >
+          <li><a data-toggle="collapse" data-target="#collapseDiv" className='' href='#home'>Home <span class="sr-only">(current)</span> </a></li>
+          <li><a data-toggle="collapse" data-target="#collapseDiv" className='' href='#about'>Resume</a></li>
+          <li><a data-toggle="collapse" data-target="#collapseDiv" className='' href='#awards'>Awards</a></li>
+          <li><a data-toggle="collapse" data-target="#collapseDiv" className='' href='#projects'>Projects</a></li>
+          <li><a data-toggle="collapse" data-target="#collapseDiv" className='' href='mailto:nimesh3536@gmail.com'>Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   );
