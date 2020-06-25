@@ -77,8 +77,7 @@ html {
   background-color: white;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5%;
-
+  margin-bottom: 35px;
 }
 
 .footer > h5 {
@@ -768,6 +767,9 @@ html {
     flex-direction: column;
   }
 
+  .footer {
+    margin-bottom: 20px;
+  }
   .footer > h5 {
     font-size: 13px;
   }
