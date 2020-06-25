@@ -69,6 +69,27 @@ html {
   position: fixed;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-family: 'Roboto Mono';
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+
+}
+
+.footer > h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.footer > .love > .heart {
+  color: #a83f39;
+}
+
 .main-container {
   overflow: hidden;
   position: relative;
@@ -293,7 +314,6 @@ html {
   padding: 2%;
   width: auto;
   height: auto;
-  border: 3px dashed #dfdfdf;
   justify-self: flex-end;
   align-self: center;
 }
@@ -304,7 +324,6 @@ html {
   height: auto;
   margin: 2%;
   padding: 2%;
-  border: 3px dashed #dfdfdf;
   justify-self: flex-end;
   align-self: flex-start;
 }
@@ -742,6 +761,21 @@ html {
     overflow-y: auto;
     z-index: 2;
   }
+
+  .cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .footer > h5 {
+    font-size: 13px;
+  }
+  
+  .footer > .love > .heart {
+    color: #a83f39;
+  }
+
 }
 
 :root {

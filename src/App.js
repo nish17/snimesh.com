@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import AboutMe from './AboutMe';
 import Awards from './Awards';
 import Projects from './Projects';
-
+import Footer from './Footer';
 const App = () => {
   return (
     <div>
@@ -31,7 +31,11 @@ const App = () => {
       <section id='projects'>
         <Projects />
       </section>
+
     </div>
+      <section id='footer'>
+        <Footer />
+      </section>
     </div>
   );
 };
