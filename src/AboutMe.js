@@ -2,7 +2,7 @@ import React from 'react';
 import ExperienceAndEducation from './ExperienceAndEducation';
 import GithubCard from './GithubCard';
 import StackOverFlowCard from './StackOverFlowCard';
-
+import Resume from './assets/Resume-Nimesh-Solanki.pdf';
 const AboutMe = () => {
   return (
     <div className='aboutMe-container'>
@@ -38,7 +38,7 @@ const AboutMe = () => {
           </div>
           <div className='button-1'>
             <a href='mailto:nimesh3536@gmail.com'>Email me</a>
-            <a href='#Resume'>Checkout Resume</a>
+            <a href={Resume} download='Nimesh_Resume'>Checkout Resume</a>
           </div>
         </div>
       <div className='exp-and-edu-1'>
