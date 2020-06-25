@@ -17,7 +17,7 @@ const StackOverFlowCard = () => {
 
   return (
     <div>
-      <div id='so-card-widget' data-userid='5539913' data-theme='minimal'></div>
+      <div id='so-card-widget' className='stackoverflow-card'  data-userid='5539913' data-theme='minimal'></div>
     </div>
   );
 };

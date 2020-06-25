@@ -303,28 +303,19 @@ html {
   justify-content: space-around;
 }
 
-.github-card {
+.github-card, .stackoverflow-card {
   flex: 1;
+  max-width: 400px;
 }
 
-.gh-card {
+.gh-card, .so-card {
   flex: 1;
+  width: 100%;
+  height: 100%;
   margin: 2%;
   padding: 2%;
-  width: auto;
-  height: auto;
   justify-self: flex-end;
   align-self: center;
-}
-
-.so-card {
-  flex: 1;
-  width: auto;
-  height: auto;
-  margin: 2%;
-  padding: 2%;
-  justify-self: flex-end;
-  align-self: flex-start;
 }
 
 .projects {
@@ -759,12 +750,6 @@ html {
     height: calc(100vh - 50px);
     overflow-y: auto;
     z-index: 2;
-  }
-
-  .cards-grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
   }
 
   .footer {
