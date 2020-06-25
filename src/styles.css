@@ -9,8 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 #home {
   position: relative;
   width: 100%;
@@ -148,14 +146,13 @@ html {
 }
 
 .nav-links > ul > li {
-  margin: 2% 2% 0 0 ;
+  margin: 2% 2% 0 0;
   align-self: flex-end;
 }
 
 .nav-links > ul > li > a {
   padding: 13px 10px 13px 10px;
   color: #000;
-
 }
 /* .nav > .nav-collapse >  */
 .nav > .nav-collapse > .nav-links > ul > .active {
@@ -200,7 +197,7 @@ html {
     height: 10px;
     border-top: 2px solid #000;
   }
-  .nav > .nav-collapse > .nav-links  {
+  .nav > .nav-collapse > .nav-links {
     position: absolute;
     display: block;
     width: 100%;
@@ -213,10 +210,10 @@ html {
     z-index: 2;
   }
   /* .nav > .nav-collapse > .nav-links > ul > li > a { */
-    /* display: block; */
-    /* width: 100%; */
-    /* margin: 2%; */
-    /* padding: 4%; */
+  /* display: block; */
+  /* width: 100%; */
+  /* margin: 2%; */
+  /* padding: 4%; */
   /* } */
 
   .nav-links > ul {
@@ -412,9 +409,8 @@ li > a:hover {
 }
 
 .github-card {
-  flex:1;
+  flex: 1;
 }
-
 
 .gh-card {
   flex: 1;
@@ -734,53 +730,48 @@ figure:hover .show-img-1 {
   height: 100px;
 }
 
-
 @media only screen and (max-width: 600px) {
   body {
     background-color: lightblue;
     font-family: 'Roboto Mono';
   }
 
+  .main-container {
+    scroll-snap-type: y mandatory;
+    /* scroll-snap-align: start; */
+  }
+
+  /* .text-center, */
+  .grid-container,
+  .awards,
+  .projects {
+    scroll-snap-align: start;
+    padding-top: 8%;
+  }
+
   .left-line {
     border-left: 15px solid #f26b38;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    z-index: 1000;
   }
 
   .right-line {
     border-right: 15px solid #f26b38;
-    height: 100vh;
-    position: fixed;
-    right: 0;
-    z-index: 1000;
   }
 
   .top-line {
     border-top: 15px solid #f26b38;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    position: sticky;
   }
 
   .bottom-line {
     border-bottom: 15px solid #f26b38;
-    width: 100%;
-    bottom: 0;
-    z-index: 1000;
-    position: fixed;
   }
 
   .main-container {
-    overflow: hidden;
-    position: relative;
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
     max-width: 768px;
-    border: 2px solid magenta;
+  }
+
+  .child-center {
+    margin-top: 5%;
   }
 
   .img {
@@ -788,11 +779,15 @@ figure:hover .show-img-1 {
   }
 
   .button-1 {
-    display: inline-grid;
-    /* grid-column: 1/-1; */
     margin-left: 5%;
   }
 
+  .text-center > h1 {
+    font-size: 6.4vw;
+  }
+  .text-center > h5 {
+    font-size: 4vw;
+  }
   .grid-container {
     display: flex;
     flex-direction: column;
@@ -843,11 +838,9 @@ figure:hover .show-img-1 {
   .about-title-1 > h3,
   .projects > h3,
   .awards > h3 {
-    display: inline;
-    font-size: 13px;
-    margin-left: 6%;
-    font-family: 'Roboto Mono';
-    box-shadow: inset 0 -6px 0px #ede574;
+    margin-left: 9%;
+    font-size: 11px;
+    /* padding-top: 20%; */
   }
 
   .awards-container,
@@ -856,8 +849,8 @@ figure:hover .show-img-1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 2%;
-    padding: 3%;
+    margin: 4%;
+    padding: 6%;
   }
 
   .awards-container > .award-1,
