@@ -9,6 +9,8 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 #home {
   position: relative;
   width: 100%;
@@ -110,6 +112,7 @@ html {
 }
 
 .text-center > h5 {
+  font-family: 'Roboto Mono';
   font-size: 1.5rem;
 }
 
@@ -155,8 +158,9 @@ html {
 
 }
 /* .nav > .nav-collapse >  */
-.active {
+.nav > .nav-collapse > .nav-links > ul > .active {
   color: #f26b38;
+  text-emphasis: var(--text);
 }
 .nav-links > ul > li > a:hover {
   color: #f26b38;
@@ -208,18 +212,18 @@ html {
     left: 0px;
     z-index: 2;
   }
-  .nav > .nav-collapse > .nav-links > ul > li > a {
+  /* .nav > .nav-collapse > .nav-links > ul > li > a { */
     /* display: block; */
     /* width: 100%; */
     /* margin: 2%; */
     /* padding: 4%; */
-  }
+  /* } */
 
   .nav-links > ul {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
   }
   .nav-links > ul > li {
     width: 100%;
@@ -407,25 +411,27 @@ li > a:hover {
   justify-content: space-around;
 }
 
-.gh-card {
-  /* display: inline; */
-  flex: 1;
-  margin: 2%;
-}
-.so-card {
-  /* display: inline; */
-  flex: 1;
-  margin: 2%;
+.github-card {
+  flex:1;
 }
 
+
 .gh-card {
+  flex: 1;
+  margin: 2%;
   padding: 2%;
+  width: auto;
+  height: auto;
   border: 3px dashed #dfdfdf;
   justify-self: flex-end;
   align-self: center;
 }
 
 .so-card {
+  flex: 1;
+  width: auto;
+  height: auto;
+  margin: 2%;
   padding: 2%;
   border: 3px dashed #dfdfdf;
   justify-self: flex-end;

@@ -11,14 +11,14 @@ const NavBar = () => {
           <span></span>
         </label>
       </div>
-      <div className='nav-collapse navbar-collapse collapse navbar-collapse collapse hide'>
+      <div className='nav-collapse'>
         <div className='nav-links'>
         <ul >
-          <li><a data-toggle="collapse" data-target="#collapseDiv" className='' href='#home'>Home <span class="sr-only">(current)</span> </a></li>
-          <li><a data-toggle="collapse" data-target="#collapseDiv" className='' href='#about'>Resume</a></li>
-          <li><a data-toggle="collapse" data-target="#collapseDiv" className='' href='#awards'>Awards</a></li>
-          <li><a data-toggle="collapse" data-target="#collapseDiv" className='' href='#projects'>Projects</a></li>
-          <li><a data-toggle="collapse" data-target="#collapseDiv" className='' href='mailto:nimesh3536@gmail.com'>Contact</a></li>
+          <li><a className='active' href='#home'>Home</a></li>
+          <li><a className='' href='#about'>Resume</a></li>
+          <li><a className='' href='#awards'>Awards</a></li>
+          <li><a className='' href='#projects'>Projects</a></li>
+          <li><a className='' href='mailto:nimesh3536@gmail.com'>Contact</a></li>
           </ul>
         </div>
       </div>
