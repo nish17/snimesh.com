@@ -19,7 +19,7 @@ const GithubCard = () => {
       <div
         className='github-card'
         data-github='nish17'
-        data-width='400'
+        data-width=''
         data-height=''
         data-theme='default'
       ></div>
