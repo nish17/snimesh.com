@@ -16,24 +16,20 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-
   </head>
   <body>
     <div id="root">raw-root</div>
     <script>
       $(document).ready(function () {
         $('.nav-links>ul>li>a').click(function (e) {
-          // e.preventDefault();
-          console.log('clicked somewhere');
-          $('.nav-collapse').collapse('hide');
-          $('#collapseDiv').removeClass('active');
-          $(this).addClass('active');
+          /* Close Navbar after user clicks on navbar */
+          $('#nav-check').prop('checked', false);
+
+          /* add active class */
+            $('li a').removeClass('active');
+            $(this).addClass('active');
+          // console.log('clicked on ', this);
         });
-
-        // var selector = '.nav-links ul li a';
-
-        // $(selector).on('click', function () {
-        // });
       });
     </script>
     <script src="App.js"></script>
