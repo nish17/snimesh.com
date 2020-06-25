@@ -1,11 +1,11 @@
 import React from 'react';
 
 import VOICE from './assets/Voice.webp';
-import RisingStar from './assets/risingStar.png';
-import bixbyPD from './assets/bixbyPD.png';
-import gdg from './assets/gdgahm.jpeg';
-import alexa from './assets/alexa.png';
-// import VoiceAwards from './assets/inside_voice_awards.png';
+import RisingStar from './assets/risingStar.jp2';
+import bixbyPD from './assets/bixbyPD.jp2';
+import gdg from './assets/gdgahm.jp2';
+import alexa from './assets/alexa.jp2';
+// import VoiceAwards from './assets/inside_voice_awards.jp2';
 
 const Awards = () => {
   return (

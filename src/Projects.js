@@ -1,15 +1,15 @@
 import React from 'react';
 
 import nodeIcon from './assets/nodejs-icon.svg';
-import twilioIcon from './assets/twilio.png';
-import awsIcon from './assets/aws.png';
-import bbIcon from './assets/BigBasketIcon.png';
-import chromeDevIcon from './assets/chrome-dev.png';
-import FirebaseIcon from './assets/firebase.png';
-import DialogFlowIcon from './assets/dialogflow.png';
-import MomentIcon from './assets/momentjs.png';
-import BixbyIcon from './assets/bixby.png';
-import BixbyLogo from './assets/bixby.jpg';
+import twilioIcon from './assets/twilio.jp2';
+import awsIcon from './assets/aws.jp2';
+import bbIcon from './assets/BigBasketIcon.jp2';
+import chromeDevIcon from './assets/chrome-dev.jp2';
+import FirebaseIcon from './assets/firebase.jp2';
+import DialogFlowIcon from './assets/dialogflow.jp2';
+import MomentIcon from './assets/momentjs.jp2';
+import BixbyIcon from './assets/bixbyIcon.jp2';
+import BixbyLogo from './assets/bixby.jp2';
 import AoG from './assets/AoG.gif';
 const Projects = () => {
   return (
@@ -172,7 +172,7 @@ const Projects = () => {
               title='Samsung Bixby'
               href='http://bixbydevelopers.com/'
             >
-              <img className='tech-icons' src={BixbyLogo} />
+              <img className='tech-icons' src={BixbyIcon} />
             </a>
             <div className='tech-title' >Backend:</div>
             <a
@@ -187,7 +187,7 @@ const Projects = () => {
             Voice app that gives the information about Linear Data Structure, 
             Non-Linear Data Structure. It also shows visual representation of all the data structures.
           </div>
-          <img className='project-img-4' src={BixbyIcon} />
+          <img className='project-img-4' src={BixbyLogo} />
         </div>
       </div>
     </div>
