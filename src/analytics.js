@@ -5,9 +5,9 @@ export const initGA = () => {
     ReactGA.initialize('UA-170963982-1')
 }
 export const logPageView = () => {
-    console.log(`Logging pageview for ${window.location.pathname}`)
-    ReactGA.set({ page: window.location.pathname })
-    ReactGA.pageview(window.location.pathname)
+    console.log(`Logging pageview for ${window.location.pathname,window.location.search,window.location.hash}`)
+    ReactGA.set({ page: window.location.pathname+window.location.search+window.location.hash })
+    ReactGA.pageview(window.location.pathname+window.location.search+window.location.hash)
 }
 export const logEvent = (category = '', action = '') => {
     if (category && action) {
