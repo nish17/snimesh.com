@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { render } from 'react-dom';
 import ReactGA from 'react-ga';
+import * as ga from './analytics';
 
 import Home from './Home';
 import Navbar from './Navbar';
@@ -9,10 +10,12 @@ import Awards from './Awards';
 import Projects from './Projects';
 import Footer from './Footer';
 const App = () => {
+  ga.initGA();
+  // ReactGA.initialize('UA-170963982-1');
   useEffect(() => {
-    ReactGA.initialize('UA-170963982-1');
-    ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
-    ReactGA.ga('send', 'pageview');
+    ga.logPageView();
+    // ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
+    // ReactGA.ga('send', 'pageview');
   }, []);
 
   return (

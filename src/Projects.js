@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
+import * as ga from './analytics';
 
 import nodeIcon from './assets/nodejs-icon.svg';
 import twilioIcon from './assets/twilio.jp2';
@@ -13,10 +14,14 @@ import BixbyIcon from './assets/bixbyIcon.jp2';
 import BixbyLogo from './assets/bixby.jp2';
 import AoG from './assets/AoG.gif';
 const Projects = () => {
-
   useEffect(() => {
-    ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
-    ReactGA.ga('send','pageview');
+    /* ReactGA.ga(
+      'set',
+      'page',
+      window.location.pathname + window.location.search + window.location.hash
+    );
+    ReactGA.ga('send', 'pageview'); */
+    ga.logPageView();
   }, []);
 
   return (
@@ -25,18 +30,24 @@ const Projects = () => {
       <div className='projects-container'>
         <div className='project-1'>
           <div className='project-title-1'>
-            <a href='https://github.com/nish17/bigBasket-notifier'>
+            <a
+              onClick={() => ga.logEvent('Github', 'BigBasket Notifier')}
+              href='https://github.com/nish17/bigBasket-notifier'
+            >
               <div>Big Basket Notifier</div>
             </a>
           </div>
           <div className='tech-stack-1'>
-            <div className='tech-title' >Frontend:</div>
+            <div className='tech-title'>Frontend:</div>
             N/A
-            <div className='tech-title' >Backend:</div>
+            <div className='tech-title'>Backend:</div>
             <a
               className='tech-icons-container'
               title='Node.js'
               href='https://nodejs.org/'
+              onClick={() =>
+                ga.logEvent('techStack', 'Node.js in projects section')
+              }
             >
               <img className='tech-icons' src={nodeIcon} />
             </a>
@@ -44,6 +55,9 @@ const Projects = () => {
               className='tech-icons-container'
               title='Twilio'
               href='https://www.twilio.com/'
+              onClick={() =>
+                ga.logEvent('techStack', 'Twilio in projects section')
+              }
             >
               <img className='tech-icons' src={twilioIcon} />
             </a>
@@ -51,6 +65,9 @@ const Projects = () => {
               className='tech-icons-container'
               title='AWS'
               href='https://aws.amazon.com/'
+              onClick={() =>
+                ga.logEvent('techStack', 'AWS in projects section')
+              }
             >
               <img className='tech-icons' src={awsIcon} />
             </a>
@@ -58,6 +75,9 @@ const Projects = () => {
               className='tech-icons-container'
               title='Chrome Dev Tools'
               href='https://developers.google.com/web/tools/chrome-devtools'
+              onClick={() =>
+                ga.logEvent('techStack', 'Chrome Dev Tools in projects section')
+              }
             >
               <img className='tech-icons' src={chromeDevIcon} />
             </a>
@@ -72,16 +92,22 @@ const Projects = () => {
         </div>
         <div className='project-2'>
           <div className='project-title-1'>
-            <a href='https://github.com/nish17/scheduler'>
+            <a
+              href='https://github.com/nish17/scheduler'
+              onClick={() => ga.logEvent('Github', 'PDPU Scheduler')}
+            >
               <div>PDPU Scheduler</div>
             </a>
           </div>
           <div className='tech-stack-1'>
-          <div className='tech-title' >VUI:</div>
+            <div className='tech-title'>VUI:</div>
             <a
               className='tech-icons-container'
               title='Google Assistant'
               href='https://developers.google.com/assistant'
+              onClick={() =>
+                ga.logEvent('techStack', 'Google Assitant in projects section')
+              }
             >
               <img className='tech-icons' src={AoG} />
             </a>
@@ -89,14 +115,20 @@ const Projects = () => {
               className='tech-icons-container'
               title='DialogFlow'
               href='https://dialogflow.com/'
+              onClick={() =>
+                ga.logEvent('techStack', 'Dialogflow in projects section')
+              }
             >
               <img className='tech-icons' src={DialogFlowIcon} />
             </a>
-            <div className='tech-title' >Backend:</div>
+            <div className='tech-title'>Backend:</div>
             <a
               className='tech-icons-container'
               title='Node.js'
               href='https://nodejs.org/'
+              onClick={() =>
+                ga.logEvent('techStack', 'Node.js in projects section')
+              }
             >
               <img className='tech-icons' src={nodeIcon} />
             </a>
@@ -104,6 +136,9 @@ const Projects = () => {
               className='tech-icons-container'
               title='Firebase Cloud Functions'
               href='https://firebase.google.com/docs/functions'
+              onClick={() =>
+                ga.logEvent('techStack', 'Firebase in projects section')
+              }
             >
               <img className='tech-icons' src={FirebaseIcon} />
             </a>
@@ -111,6 +146,9 @@ const Projects = () => {
               className='tech-icons-container inc-width'
               title='Momentjs'
               href='https://momentjs.com/'
+              onClick={() =>
+                ga.logEvent('techStack', 'Moment.js in projects section')
+              }
             >
               <img className='tech-icons' src={MomentIcon} />
             </a>
@@ -124,16 +162,22 @@ const Projects = () => {
         </div>
         <div className='project-3'>
           <div className='project-title-1'>
-            <a href='https://github.com/nish17/GDG-Ahmedabad-Action'>
+            <a
+              href='https://github.com/nish17/GDG-Ahmedabad-Action'
+              onClick={() => ga.logEvent('Github', 'GDG Ahmedabad Action')}
+            >
               <div>GDG Ahmedabad</div>
             </a>
           </div>
           <div className='tech-stack-1'>
-          <div className='tech-title' >VUI:</div>
+            <div className='tech-title'>VUI:</div>
             <a
               className='tech-icons-container'
               title='Google Assistant'
               href='https://developers.google.com/assistant'
+              onClick={() =>
+                ga.logEvent('techStack', 'Google Assistant in projects section')
+              }
             >
               <img className='tech-icons' src={AoG} />
             </a>
@@ -141,14 +185,20 @@ const Projects = () => {
               className='tech-icons-container'
               title='DialogFlow'
               href='https://dialogflow.com/'
+              onClick={() =>
+                ga.logEvent('techStack', 'Dialogflow in projects section')
+              }
             >
               <img className='tech-icons' src={DialogFlowIcon} />
             </a>
-            <div className='tech-title' >Backend:</div>
+            <div className='tech-title'>Backend:</div>
             <a
               className='tech-icons-container'
               title='Node.js'
               href='https://nodejs.org/'
+              onClick={() =>
+                ga.logEvent('techStack', 'Node.js in projects section')
+              }
             >
               <img className='tech-icons' src={nodeIcon} />
             </a>
@@ -156,43 +206,57 @@ const Projects = () => {
               className='tech-icons-container'
               title='Firebase Cloud Functions'
               href='https://firebase.google.com/docs/functions'
+              onClick={() =>
+                ga.logEvent('techStack', 'Firebase in projects section')
+              }
             >
               <img className='tech-icons' src={FirebaseIcon} />
             </a>
           </div>
           <div className='project-desc-1'>
-            Voice app that gives the information about GDG, DevFests and core-committe members of GDG
-            Ahmedabad. It also shows information about the schedule of all talks.
+            Voice app that gives the information about GDG, DevFests and
+            core-committe members of GDG Ahmedabad. It also shows information
+            about the schedule of all talks.
           </div>
           <img className='project-img-2' src={AoG} />
         </div>
         <div className='project-4'>
-        <div className='project-title-1'>
-            <a href='https://github.com/nish17/bixby-DataStructure-Visualizer'>
+          <div className='project-title-1'>
+            <a
+              href='https://github.com/nish17/bixby-DataStructure-Visualizer'
+              onClick={() => ga.logEvent('Github', 'DataStructure Visualizer')}
+            >
               <div>DataStructure Visualizer</div>
             </a>
           </div>
           <div className='tech-stack-1'>
-          <div className='tech-title' >VUI:</div>
+            <div className='tech-title'>VUI:</div>
             <a
               className='tech-icons-container'
               title='Samsung Bixby'
               href='http://bixbydevelopers.com/'
+              onClick={() =>
+                ga.logEvent('techStack', 'Bixby in projects section')
+              }
             >
               <img className='tech-icons' src={BixbyIcon} />
             </a>
-            <div className='tech-title' >Backend:</div>
+            <div className='tech-title'>Backend:</div>
             <a
               className='tech-icons-container'
               title='Node.js'
               href='https://nodejs.org/'
+              onClick={() =>
+                ga.logEvent('techStack', 'Node.js in projects section')
+              }
             >
               <img className='tech-icons' src={nodeIcon} />
             </a>
           </div>
           <div className='project-desc-1'>
-            Voice app that gives the information about Linear Data Structure, 
-            Non-Linear Data Structure. It also shows visual representation of all the data structures.
+            Voice app that gives the information about Linear Data Structure,
+            Non-Linear Data Structure. It also shows visual representation of
+            all the data structures.
           </div>
           <img className='project-img-4' src={BixbyLogo} />
         </div>

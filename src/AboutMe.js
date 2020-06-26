@@ -1,29 +1,15 @@
 import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 import ExperienceAndEducation from './ExperienceAndEducation';
 import GithubCard from './GithubCard';
 import StackOverFlowCard from './StackOverFlowCard';
 import Resume from './assets/Resume-Nimesh-Solanki.pdf';
+import * as ga from './analytics';
 
 const AboutMe = () => {
   useEffect(() => {
-    ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
-    ReactGA.ga('send','pageview');
+    ga.logPageView();
   }, []);
-
-  function downloadResumeHandler() {
-    ReactGA.event({
-      category: 'Checkout Resume',
-      action: 'Downloaded Resume',
-    });
-  }
-
-  function emailMeHandler() {
-    ReactGA.event({
-      category: 'Email Me',
-      action: 'Mail me',
-    });
-  }
 
   return (
     <div className='aboutMe-container'>
@@ -40,29 +26,76 @@ const AboutMe = () => {
         <div className='content-1'>
           <p>
             I'm a developer at heart with experience in{' '}
-            <a href='https://nodejs.org/'>Node.js</a> on the backend,{' '}
-            <a href='https://developers.google.com/assistant'>
+            <a
+              onClick={() =>
+                ga.logEvent('techStack', 'Node.js in about section')
+              }
+              href='https://nodejs.org/'
+            >
+              Node.js
+            </a>{' '}
+            on the backend,{' '}
+            <a
+              onClick={() =>
+                ga.logEvent('techStack', 'Google Assistant in about section')
+              }
+              href='https://developers.google.com/assistant'
+            >
               Google Assistant
             </a>
-            /<a href='https://developer.amazon.com/en-US/alexa'>Amazon Alexa</a>
             /
-            <a href='https://www.samsung.com/us/explore/bixby/'>
+            <a
+              onClick={() =>
+                ga.logEvent('techStack', 'Amazon Alexa in about section')
+              }
+              href='https://developer.amazon.com/en-US/alexa'
+            >
+              Amazon Alexa
+            </a>
+            /
+            <a
+              onClick={() =>
+                ga.logEvent('techStack', 'Samsung bixby in about section')
+              }
+              href='https://www.samsung.com/us/explore/bixby/'
+            >
               Samsung Bixby
             </a>
-            on the Voice-End, and <a href='https://angular.io/'>Angular</a>/
-            <a href='https://reactjs.org/'>React</a> on the Frontend. <br /> I
-            am seeking for opportunities with a competitive and challenging
-            environment where I can serve your organization and establish an
-            enjoyable career for myself.
+            on the Voice-End, and{' '}
+            <a
+              onClick={() =>
+                ga.logEvent('techStack', 'Angular in about section')
+              }
+              href='https://angular.io/'
+            >
+              Angular
+            </a>
+            /
+            <a
+              onClick={() =>
+                ga.logEvent('techStack', 'React in about section')
+              }
+              href='https://reactjs.org/'
+            >
+              React
+            </a>{' '}
+            on the Frontend. <br /> I am seeking for opportunities with a
+            competitive and challenging environment where I can serve your
+            organization and establish an enjoyable career for myself.
           </p>
         </div>
         <div className='button-1'>
-          <a onClick={emailMeHandler} href='mailto:nimesh3536@gmail.com'>
+          <a
+            onClick={() => ga.logEvent('mailMe', 'Mail me in about section')}
+            href='mailto:nimesh3536@gmail.com'
+          >
             Email me
           </a>
 
           <a
-            onClick={downloadResumeHandler}
+            onClick={() => {
+              ga.logEvent('Checkout Resume', 'Downloaded Resume');
+            }}
             href={Resume}
             download='Nimesh_Resume'
           >

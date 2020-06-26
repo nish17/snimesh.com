@@ -1,4 +1,5 @@
 import React from 'react';
+import * as ga from './analytics';
 
 const ExperienceAndEducation = () => {
   return (
@@ -10,7 +11,7 @@ const ExperienceAndEducation = () => {
           <div className='card-title-1'>
             <h4>
               SDE Intern -{' '}
-              <a href='https://tapchief.com' target='_blank'>
+              <a onClick={() => ga.logEvent('Company', 'TapChief')} href='https://tapchief.com' target='_blank'>
                 TapChief
               </a>
             </h4>
@@ -28,7 +29,7 @@ const ExperienceAndEducation = () => {
           <div className='card-title-1'>
             <h4>
               SDE Intern -{' '}
-              <a href='https://winimy.ai' target='_blank'>
+              <a onClick={() => ga.logEvent('Company', 'WinimyAI')} href='https://winimy.ai' target='_blank'>
                 Winimy AI
               </a>
             </h4>
@@ -45,7 +46,7 @@ const ExperienceAndEducation = () => {
           <div className='card-title-1'>
             <h4>
               Backend Developer Intern -{' '}
-              <a href='https://espressolabs.in/' target='_blank'>
+              <a onClick={() => ga.logEvent('Company', 'Espresso Labs')} href='https://espressolabs.in/' target='_blank'>
                 Espresso Labs
               </a>
             </h4>
@@ -69,7 +70,7 @@ const ExperienceAndEducation = () => {
           <div className='card-desc-1'>
             <p>
               Batch 2016,{' '}
-              <a href='http://pdpu.ac.in/' target='_blank'>
+              <a onClick={() => ga.logEvent('Education', 'PDPU')} href='http://pdpu.ac.in/' target='_blank'>
                 {' '}
                 Pandit Deendayal Petroleum Univeristy, Gandhinagar
               </a>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
+import * as ga from './analytics';
 
 import VOICE from './assets/Voice.webp';
 import RisingStar from './assets/risingStar.jp2';
@@ -9,12 +10,11 @@ import alexa from './assets/alexa.jp2';
 // import VoiceAwards from './assets/inside_voice_awards.jp2';
 
 const Awards = () => {
-
   useEffect(() => {
-    ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
-    ReactGA.ga('send','pageview');
+    ga.logPageView();
+    // ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
+    // ReactGA.ga('send','pageview');
   }, []);
-  
 
   return (
     <div className='awards'>
@@ -29,6 +29,9 @@ const Awards = () => {
               <div>
                 Link:{' '}
                 <a
+                  onClick={() =>
+                    ga.logEvent('Blog', 'Winners of Podcast Awards')
+                  }
                   href='https://www.voicesummit.ai/blog/the-winners-of-the-inside-voice-podcast-awards-are'
                   target='_blank'
                 >
@@ -38,6 +41,7 @@ const Awards = () => {
               <div>
                 Link:{' '}
                 <a
+                  onClick={() => ga.logEvent('Podcast', "Nimesh's Podcast")}
                   href='https://podcasts.apple.com/us/podcast/developing-voice-skills-as-a-student/id1447407838?i=1000447426808'
                   target='_blank'
                 >
@@ -47,7 +51,7 @@ const Awards = () => {
             </div>
           </div>
           <div className='award-right-side'>
-              <img className='award-img-1' src={RisingStar} />
+            <img className='award-img-1' src={RisingStar} />
           </div>
         </div>
         <div className='award-2'>
@@ -81,6 +85,7 @@ const Awards = () => {
               <div>
                 Link:{' '}
                 <a
+                  onClick={() => ga.logEvent('SpeakerDeck', 'devfest19')}
                   href='https://speakerdeck.com/nimeshs17/best-practices-of-vui-design'
                   target='_blank'
                 >
@@ -88,8 +93,14 @@ const Awards = () => {
                 </a>
               </div>
               <div>
-                Link: {' '}
-                <a href='https://youtu.be/JMbSDu80TlU' target='_blank'>Recorded Session</a>
+                Link:{' '}
+                <a
+                  onClick={() => ga.logEvent('Youtube', 'devfest19 session')}
+                  href='https://youtu.be/JMbSDu80TlU'
+                  target='_blank'
+                >
+                  Recorded Session
+                </a>
               </div>
             </div>
           </div>
@@ -106,6 +117,7 @@ const Awards = () => {
               <div>
                 Link:{' '}
                 <a
+                  onClick={() => ga.logEvent('SpeakerDeck', 'devfest18')}
                   href='https://speakerdeck.com/jaldeepasodariya/codelab-actions-on-google-devfestahm18'
                   target='_blank'
                 >
@@ -119,7 +131,7 @@ const Awards = () => {
           </div>
         </div>
         <div className='award-6'>
-        <div className='award-left-side'>
+          <div className='award-left-side'>
             <div className='award-title'>Conducted Workshop </div>
             <div className='award-program'>Alexa Skill Development</div>
             <div className='award-org'>PDPU's TechFest 2019</div>
@@ -127,6 +139,7 @@ const Awards = () => {
               <div>
                 Link:{' '}
                 <a
+                  onClick={() => ga.logEvent('SpeakerDeck', 'Alexa Workshop')}
                   href='https://speakerdeck.com/nimeshs17/alexa-workshop-pdpu-2019'
                   target='_blank'
                 >
