@@ -5,7 +5,11 @@
 
 ## Screenshots
 
-![Refresh](./src/assets/snimesh.gif)
+### Desktop View
+![Refresh](./src/assets/screenshots/snimesh.gif)
+
+### Mobile View
+<img src="./src/assets/screenshots/screenshot1.jpeg" height="500px">
 
 ## ❤️ Credits
 
