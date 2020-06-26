@@ -346,7 +346,6 @@ html {
   border-right: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
   padding: 20px;
-  border-radius: 5%;
   margin: 1%;
 }
 
@@ -443,7 +442,6 @@ html {
   border-right: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
   padding: 20px;
-  border-radius: 5%;
   margin: 0.5%;
 }
 .award-left-side {
@@ -656,7 +654,6 @@ html {
     border-right: 1px solid #dfdfdf;
     border-bottom: 1px solid #dfdfdf;
     padding: 5%;
-    border-radius: 5%;
     margin: 0.5%;
   }
 
@@ -678,7 +675,6 @@ html {
     border-right: 1px solid #dfdfdf;
     border-bottom: 1px solid #dfdfdf;
     padding: 5%;
-    border-radius: 5%;
     margin: 1%;
   }
 
