@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
 import VOICE from './assets/Voice.webp';
 import RisingStar from './assets/risingStar.jp2';
@@ -8,6 +9,13 @@ import alexa from './assets/alexa.jp2';
 // import VoiceAwards from './assets/inside_voice_awards.jp2';
 
 const Awards = () => {
+
+  useEffect(() => {
+    ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
+    ReactGA.ga('send','pageview');
+  }, []);
+  
+
   return (
     <div className='awards'>
       <h3>Awards & Achievements</h3>

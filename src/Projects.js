@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
 import nodeIcon from './assets/nodejs-icon.svg';
 import twilioIcon from './assets/twilio.jp2';
@@ -12,6 +13,12 @@ import BixbyIcon from './assets/bixbyIcon.jp2';
 import BixbyLogo from './assets/bixby.jp2';
 import AoG from './assets/AoG.gif';
 const Projects = () => {
+
+  useEffect(() => {
+    ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
+    ReactGA.ga('send','pageview');
+  }, []);
+
   return (
     <div className='projects'>
       <h3>Projects</h3>
