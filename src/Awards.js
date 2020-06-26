@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import ReactGA from 'react-ga';
 import * as ga from './analytics';
 
 import VOICE from './assets/Voice.webp';
@@ -7,13 +6,10 @@ import RisingStar from './assets/risingStar.jp2';
 import bixbyPD from './assets/bixbyPD.jp2';
 import gdg from './assets/gdgahm.jp2';
 import alexa from './assets/alexa.jp2';
-// import VoiceAwards from './assets/inside_voice_awards.jp2';
 
 const Awards = () => {
   useEffect(() => {
     ga.logPageView();
-    // ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
-    // ReactGA.ga('send','pageview');
   }, []);
 
   return (

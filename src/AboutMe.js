@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import ReactGA from 'react-ga';
 import ExperienceAndEducation from './ExperienceAndEducation';
 import GithubCard from './GithubCard';
 import StackOverFlowCard from './StackOverFlowCard';

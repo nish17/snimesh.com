@@ -11,11 +11,8 @@ import Projects from './Projects';
 import Footer from './Footer';
 const App = () => {
   ga.initGA();
-  // ReactGA.initialize('UA-170963982-1');
   useEffect(() => {
     ga.logPageView();
-    // ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
-    // ReactGA.ga('send', 'pageview');
   }, []);
 
   return (

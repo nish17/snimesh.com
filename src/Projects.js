@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
 import * as ga from './analytics';
 
 import nodeIcon from './assets/nodejs-icon.svg';
@@ -15,12 +14,6 @@ import BixbyLogo from './assets/bixby.jp2';
 import AoG from './assets/AoG.gif';
 const Projects = () => {
   useEffect(() => {
-    /* ReactGA.ga(
-      'set',
-      'page',
-      window.location.pathname + window.location.search + window.location.hash
-    );
-    ReactGA.ga('send', 'pageview'); */
     ga.logPageView();
   }, []);
 
