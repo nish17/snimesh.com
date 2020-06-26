@@ -10,7 +10,7 @@ const Footer = () => {
       <h5 className='love'>
         Made with <span className='heart'>♥</span> in India
       </h5>
-      <h5 className='copyright'>© {getYear()} @nish17</h5>
+      <h5 className='copyright'>© {getYear()} <a href='https://twitter.com/NimeshS17'>@NimeshS17</a></h5>
     </div>
   );
 };
