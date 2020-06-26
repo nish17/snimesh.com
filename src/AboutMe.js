@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import ExperienceAndEducation from './ExperienceAndEducation';
 import GithubCard from './GithubCard';
 import StackOverFlowCard from './StackOverFlowCard';
 import Resume from './assets/Resume-Nimesh-Solanki.pdf';
+
 const AboutMe = () => {
+  useEffect(() => {
+    ReactGA.ga('set', 'page', window.location.pathname + window.location.search + window.location.hash);
+    ReactGA.ga('send','pageview');
+  }, []);
+
+  function downloadResumeHandler() {
+    ReactGA.event({
+      category: 'Checkout Resume',
+      action: 'Downloaded Resume',
+    });
+  }
+
+  function emailMeHandler() {
+    ReactGA.event({
+      category: 'Email Me',
+      action: 'Mail me',
+    });
+  }
+
   return (
     <div className='aboutMe-container'>
       <div className='grid-container'>
@@ -36,8 +57,15 @@ const AboutMe = () => {
           </p>
         </div>
         <div className='button-1'>
-          <a href='mailto:nimesh3536@gmail.com'>Email me</a>
-          <a href={Resume} download='Nimesh_Resume'>
+          <a onClick={emailMeHandler} href='mailto:nimesh3536@gmail.com'>
+            Email me
+          </a>
+
+          <a
+            onClick={downloadResumeHandler}
+            href={Resume}
+            download='Nimesh_Resume'
+          >
             Checkout Resume
           </a>
         </div>
