@@ -40,7 +40,7 @@ const AboutMe = () => {
               }
               href='https://developers.google.com/assistant'
             >
-              Google Assistant
+              Google Assistant{' '}
             </a>
             /
             <a
@@ -49,7 +49,7 @@ const AboutMe = () => {
               }
               href='https://developer.amazon.com/en-US/alexa'
             >
-              Amazon Alexa
+              {' '}Amazon Alexa{' '}
             </a>
             /
             <a
@@ -58,7 +58,7 @@ const AboutMe = () => {
               }
               href='https://www.samsung.com/us/explore/bixby/'
             >
-              Samsung Bixby
+              {' '}Samsung Bixby{' '}
             </a>
             on the Voice-End, and{' '}
             <a
@@ -67,7 +67,7 @@ const AboutMe = () => {
               }
               href='https://angular.io/'
             >
-              Angular
+              Angular{' '}
             </a>
             /
             <a
@@ -76,7 +76,7 @@ const AboutMe = () => {
               }
               href='https://reactjs.org/'
             >
-              React
+              {' '}React
             </a>{' '}
             on the Frontend. <br /> I am seeking for opportunities with a
             competitive and challenging environment where I can serve your
