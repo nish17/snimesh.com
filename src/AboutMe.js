@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ExperienceAndEducation from './ExperienceAndEducation';
 import GithubCard from './GithubCard';
-import StackOverFlowCard from './StackOverFlowCard';
+// import StackOverFlowCard from './StackOverFlowCard';
 import Resume from './assets/Resume-Nimesh-Solanki.pdf';
 import * as ga from './analytics';
 
@@ -109,9 +109,9 @@ const AboutMe = () => {
             <div className='gh-card'>
               <GithubCard />
             </div>
-            <div className='so-card'>
+           {/*  <div className='so-card'>
               <StackOverFlowCard />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
