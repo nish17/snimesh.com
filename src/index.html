@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hey, Nimesh here!</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-      crossorigin="anonymous"
-    ></script>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -49,18 +44,6 @@
             .catch((err) => console.log('Failure: ', err));
         });
       }
-
-      $(document).ready(function () {
-        $('.nav-links>ul>li>a').click(function (e) {
-          /* Close Navbar after user clicks on navbar */
-          $('#nav-check').prop('checked', false);
-
-          /* add active class */
-          $('li a').removeClass('active');
-          $(this).addClass('active');
-          // console.log('clicked on ', this);
-        });
-      });
     </script>
     <script src="App.js"></script>
   </body>
