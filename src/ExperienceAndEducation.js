@@ -7,10 +7,27 @@ const ExperienceAndEducation = () => {
       <div className='experience'>
         <h3>Experience</h3>
         <article>
+          <h5 className='small-box'>November 2020 - Present</h5>
+          <div className='card-title-1'>
+            <h4>
+              SDE-{'1 '} @ {' '}
+              <a onClick={() => ga.logEvent('Company', 'Nova')} href='https://getnovaapp.com' target='_blank'>
+                Nova Benefits
+              </a>
+            </h4>
+          </div>
+          <div className='card-desc-1'>
+            <p>
+              I work on Frontend as well as on Backend. With Vue2 in the Frontend and communicating with GraphQL API with Postgres, Typescript in the Backend worked on various interfaces and integrations. 
+              Also helped the company in adding RASA as the NLU Layer in one of the internal applications. 
+            </p>
+          </div>
+        </article>
+        <article>
           <h5 className='small-box'>January 2020 - April 2020</h5>
           <div className='card-title-1'>
             <h4>
-              SDE Intern -{' '}
+              SDE Intern @{' '}
               <a onClick={() => ga.logEvent('Company', 'TapChief')} href='https://tapchief.com' target='_blank'>
                 TapChief
               </a>
@@ -28,7 +45,7 @@ const ExperienceAndEducation = () => {
           <h5 className='small-box'>June 2019 - July 2019</h5>
           <div className='card-title-1'>
             <h4>
-              SDE Intern -{' '}
+              SDE Intern @{' '}
               <a onClick={() => ga.logEvent('Company', 'WinimyAI')} href='https://winimy.ai' target='_blank'>
                 Winimy AI
               </a>
@@ -45,7 +62,7 @@ const ExperienceAndEducation = () => {
           <h5 className='small-box'>January 2019 - January 2019</h5>
           <div className='card-title-1'>
             <h4>
-              Backend Developer Intern -{' '}
+              Backend Developer Intern @{' '}
               <a onClick={() => ga.logEvent('Company', 'Espresso Labs')} href='https://espressolabs.in/' target='_blank'>
                 Espresso Labs
               </a>
