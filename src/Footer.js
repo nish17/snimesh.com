@@ -15,7 +15,7 @@ const Footer = () => {
         © {getYear()}{' '}
         <a
           href='https://twitter.com/NimeshS17'
-          onClick={() => ga.logEvent('footer', 'Twitter')}
+          onClick={() => ga.logCustomEvent('footer', 'Twitter')}
         >
           @NimeshS17
         </a>
