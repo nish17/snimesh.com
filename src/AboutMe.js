@@ -27,7 +27,7 @@ const AboutMe = () => {
             I'm a developer at heart with experience in{' '}
             <a
               onClick={() =>
-                ga.logEvent('techStack', 'Node.js in about section')
+                ga.logCustomEvent('techStack', 'Node.js in about section')
               }
               href='https://nodejs.org/'
             >
@@ -36,7 +36,7 @@ const AboutMe = () => {
             on the backend,{' '}
             <a
               onClick={() =>
-                ga.logEvent('techStack', 'Google Assistant in about section')
+                ga.logCustomEvent('techStack', 'Google Assistant in about section')
               }
               href='https://developers.google.com/assistant'
             >
@@ -45,7 +45,7 @@ const AboutMe = () => {
             /
             <a
               onClick={() =>
-                ga.logEvent('techStack', 'Amazon Alexa in about section')
+                ga.logCustomEvent('techStack', 'Amazon Alexa in about section')
               }
               href='https://developer.amazon.com/en-US/alexa'
             >
@@ -54,7 +54,7 @@ const AboutMe = () => {
             /
             <a
               onClick={() =>
-                ga.logEvent('techStack', 'Samsung bixby in about section')
+                ga.logCustomEvent('techStack', 'Samsung bixby in about section')
               }
               href='https://www.samsung.com/us/explore/bixby/'
             >
@@ -63,7 +63,7 @@ const AboutMe = () => {
             on the Voice-End, and{' '}
             <a
               onClick={() =>
-                ga.logEvent('techStack', 'Angular in about section')
+                ga.logCustomEvent('techStack', 'Angular in about section')
               }
               href='https://angular.io/'
             >
@@ -72,7 +72,7 @@ const AboutMe = () => {
             /
             <a
               onClick={() =>
-                ga.logEvent('techStack', 'React in about section')
+                ga.logCustomEvent('techStack', 'React in about section')
               }
               href='https://reactjs.org/'
             >
@@ -85,7 +85,7 @@ const AboutMe = () => {
         </div>
         <div className='button-1'>
           <a
-            onClick={() => ga.logEvent('mailMe', 'Mail me in about section')}
+            onClick={() => ga.logCustomEvent('mailMe', 'Mail me in about section')}
             href='mailto:nimesh3536@gmail.com'
           >
             Email me
@@ -93,7 +93,7 @@ const AboutMe = () => {
 
           <a
             onClick={() => {
-              ga.logEvent('Checkout Resume', 'Downloaded Resume');
+              ga.logCustomEvent('Checkout Resume', 'Downloaded Resume');
             }}
             href={Resume}
             download='Nimesh_Resume'

@@ -24,7 +24,7 @@ const Projects = () => {
         <div className='project-1'>
           <div className='project-title-1'>
             <a
-              onClick={() => ga.logEvent('Github', 'BigBasket Notifier')}
+              onClick={() => ga.logCustomEvent('Github', 'BigBasket Notifier')}
               href='https://github.com/nish17/bigBasket-notifier'
             >
               <div>Big Basket Notifier</div>
@@ -39,7 +39,7 @@ const Projects = () => {
               title='Node.js'
               href='https://nodejs.org/'
               onClick={() =>
-                ga.logEvent('techStack', 'Node.js in projects section')
+                ga.logCustomEvent('techStack', 'Node.js in projects section')
               }
             >
               <img className='tech-icons' src={nodeIcon} />
@@ -49,7 +49,7 @@ const Projects = () => {
               title='Twilio'
               href='https://www.twilio.com/'
               onClick={() =>
-                ga.logEvent('techStack', 'Twilio in projects section')
+                ga.logCustomEvent('techStack', 'Twilio in projects section')
               }
             >
               <img className='tech-icons' src={twilioIcon} />
@@ -59,7 +59,7 @@ const Projects = () => {
               title='AWS'
               href='https://aws.amazon.com/'
               onClick={() =>
-                ga.logEvent('techStack', 'AWS in projects section')
+                ga.logCustomEvent('techStack', 'AWS in projects section')
               }
             >
               <img className='tech-icons' src={awsIcon} />
@@ -69,7 +69,7 @@ const Projects = () => {
               title='Chrome Dev Tools'
               href='https://developers.google.com/web/tools/chrome-devtools'
               onClick={() =>
-                ga.logEvent('techStack', 'Chrome Dev Tools in projects section')
+                ga.logCustomEvent('techStack', 'Chrome Dev Tools in projects section')
               }
             >
               <img className='tech-icons' src={chromeDevIcon} />
@@ -87,7 +87,7 @@ const Projects = () => {
           <div className='project-title-1'>
             <a
               href='https://github.com/nish17/scheduler'
-              onClick={() => ga.logEvent('Github', 'PDPU Scheduler')}
+              onClick={() => ga.logCustomEvent('Github', 'PDPU Scheduler')}
             >
               <div>PDPU Scheduler</div>
             </a>
@@ -99,7 +99,7 @@ const Projects = () => {
               title='Google Assistant'
               href='https://developers.google.com/assistant'
               onClick={() =>
-                ga.logEvent('techStack', 'Google Assitant in projects section')
+                ga.logCustomEvent('techStack', 'Google Assitant in projects section')
               }
             >
               <img className='tech-icons' src={AoG} />
@@ -109,7 +109,7 @@ const Projects = () => {
               title='DialogFlow'
               href='https://dialogflow.com/'
               onClick={() =>
-                ga.logEvent('techStack', 'Dialogflow in projects section')
+                ga.logCustomEvent('techStack', 'Dialogflow in projects section')
               }
             >
               <img className='tech-icons' src={DialogFlowIcon} />
@@ -120,7 +120,7 @@ const Projects = () => {
               title='Node.js'
               href='https://nodejs.org/'
               onClick={() =>
-                ga.logEvent('techStack', 'Node.js in projects section')
+                ga.logCustomEvent('techStack', 'Node.js in projects section')
               }
             >
               <img className='tech-icons' src={nodeIcon} />
@@ -130,7 +130,7 @@ const Projects = () => {
               title='Firebase Cloud Functions'
               href='https://firebase.google.com/docs/functions'
               onClick={() =>
-                ga.logEvent('techStack', 'Firebase in projects section')
+                ga.logCustomEvent('techStack', 'Firebase in projects section')
               }
             >
               <img className='tech-icons' src={FirebaseIcon} />
@@ -140,7 +140,7 @@ const Projects = () => {
               title='Momentjs'
               href='https://momentjs.com/'
               onClick={() =>
-                ga.logEvent('techStack', 'Moment.js in projects section')
+                ga.logCustomEvent('techStack', 'Moment.js in projects section')
               }
             >
               <img className='tech-icons' src={MomentIcon} />
@@ -157,7 +157,7 @@ const Projects = () => {
           <div className='project-title-1'>
             <a
               href='https://github.com/nish17/GDG-Ahmedabad-Action'
-              onClick={() => ga.logEvent('Github', 'GDG Ahmedabad Action')}
+              onClick={() => ga.logCustomEvent('Github', 'GDG Ahmedabad Action')}
             >
               <div>GDG Ahmedabad</div>
             </a>
@@ -169,7 +169,7 @@ const Projects = () => {
               title='Google Assistant'
               href='https://developers.google.com/assistant'
               onClick={() =>
-                ga.logEvent('techStack', 'Google Assistant in projects section')
+                ga.logCustomEvent('techStack', 'Google Assistant in projects section')
               }
             >
               <img className='tech-icons' src={AoG} />
@@ -179,7 +179,7 @@ const Projects = () => {
               title='DialogFlow'
               href='https://dialogflow.com/'
               onClick={() =>
-                ga.logEvent('techStack', 'Dialogflow in projects section')
+                ga.logCustomEvent('techStack', 'Dialogflow in projects section')
               }
             >
               <img className='tech-icons' src={DialogFlowIcon} />
@@ -190,7 +190,7 @@ const Projects = () => {
               title='Node.js'
               href='https://nodejs.org/'
               onClick={() =>
-                ga.logEvent('techStack', 'Node.js in projects section')
+                ga.logCustomEvent('techStack', 'Node.js in projects section')
               }
             >
               <img className='tech-icons' src={nodeIcon} />
@@ -200,7 +200,7 @@ const Projects = () => {
               title='Firebase Cloud Functions'
               href='https://firebase.google.com/docs/functions'
               onClick={() =>
-                ga.logEvent('techStack', 'Firebase in projects section')
+                ga.logCustomEvent('techStack', 'Firebase in projects section')
               }
             >
               <img className='tech-icons' src={FirebaseIcon} />
@@ -217,7 +217,7 @@ const Projects = () => {
           <div className='project-title-1'>
             <a
               href='https://github.com/nish17/bixby-DataStructure-Visualizer'
-              onClick={() => ga.logEvent('Github', 'DataStructure Visualizer')}
+              onClick={() => ga.logCustomEvent('Github', 'DataStructure Visualizer')}
             >
               <div>DataStructure Visualizer</div>
             </a>
@@ -229,7 +229,7 @@ const Projects = () => {
               title='Samsung Bixby'
               href='http://bixbydevelopers.com/'
               onClick={() =>
-                ga.logEvent('techStack', 'Bixby in projects section')
+                ga.logCustomEvent('techStack', 'Bixby in projects section')
               }
             >
               <img className='tech-icons' src={BixbyIcon} />
@@ -240,7 +240,7 @@ const Projects = () => {
               title='Node.js'
               href='https://nodejs.org/'
               onClick={() =>
-                ga.logEvent('techStack', 'Node.js in projects section')
+                ga.logCustomEvent('techStack', 'Node.js in projects section')
               }
             >
               <img className='tech-icons' src={nodeIcon} />

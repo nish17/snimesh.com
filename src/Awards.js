@@ -26,7 +26,7 @@ const Awards = () => {
                 Link:{' '}
                 <a
                   onClick={() =>
-                    ga.logEvent('Blog', 'Winners of Podcast Awards')
+                    ga.logCustomEvent('Blog', 'Winners of Podcast Awards')
                   }
                   href='https://www.voicesummit.ai/blog/the-winners-of-the-inside-voice-podcast-awards-are'
                   target='_blank'
@@ -37,7 +37,7 @@ const Awards = () => {
               <div>
                 Link:{' '}
                 <a
-                  onClick={() => ga.logEvent('Podcast', "Nimesh's Podcast")}
+                  onClick={() => ga.logCustomEvent('Podcast', "Nimesh's Podcast")}
                   href='https://podcasts.apple.com/us/podcast/developing-voice-skills-as-a-student/id1447407838?i=1000447426808'
                   target='_blank'
                 >
@@ -81,7 +81,7 @@ const Awards = () => {
               <div>
                 Link:{' '}
                 <a
-                  onClick={() => ga.logEvent('SpeakerDeck', 'devfest19')}
+                  onClick={() => ga.logCustomEvent('SpeakerDeck', 'devfest19')}
                   href='https://speakerdeck.com/nimeshs17/best-practices-of-vui-design'
                   target='_blank'
                 >
@@ -91,7 +91,7 @@ const Awards = () => {
               <div>
                 Link:{' '}
                 <a
-                  onClick={() => ga.logEvent('Youtube', 'devfest19 session')}
+                  onClick={() => ga.logCustomEvent('Youtube', 'devfest19 session')}
                   href='https://youtu.be/JMbSDu80TlU'
                   target='_blank'
                 >
@@ -113,7 +113,7 @@ const Awards = () => {
               <div>
                 Link:{' '}
                 <a
-                  onClick={() => ga.logEvent('SpeakerDeck', 'devfest18')}
+                  onClick={() => ga.logCustomEvent('SpeakerDeck', 'devfest18')}
                   href='https://speakerdeck.com/jaldeepasodariya/codelab-actions-on-google-devfestahm18'
                   target='_blank'
                 >
@@ -135,7 +135,7 @@ const Awards = () => {
               <div>
                 Link:{' '}
                 <a
-                  onClick={() => ga.logEvent('SpeakerDeck', 'Alexa Workshop')}
+                  onClick={() => ga.logCustomEvent('SpeakerDeck', 'Alexa Workshop')}
                   href='https://speakerdeck.com/nimeshs17/alexa-workshop-pdpu-2019'
                   target='_blank'
                 >

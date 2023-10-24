@@ -18,7 +18,7 @@ const NavBar = () => {
           <li><a className='' href='#about'>Resume</a></li>
           <li><a className='' href='#awards'>Awards</a></li>
           <li><a className='' href='#projects'>Projects</a></li>
-          <li><a className='' onClick={() => ga.logEvent('mailMe', 'Mail me in navbar')} href='mailto:nimesh3536@gmail.com'>Contact</a></li>
+          <li><a className='' onClick={() => ga.logCustomEvent('mailMe', 'Mail me in navbar')} href='mailto:nimesh3536@gmail.com'>Contact</a></li>
           </ul>
         </div>
       </div>

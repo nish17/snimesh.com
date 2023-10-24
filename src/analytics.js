@@ -1,21 +1,27 @@
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga';
 
-export const initGA = () => {
-    // console.log('GA init')
-    ReactGA.initialize('UA-170963982-1')
-}
+// Initialize Google Analytics
+export const initializeGoogleAnalytics = () => {
+    ReactGA.initialize("UA-170963982-1");
+};
+
+// Log a page view
 export const logPageView = () => {
-    // console.log(`Logging pageview for ${window.location.pathname,window.location.search,window.location.hash}`)
-    ReactGA.set({ page: window.location.pathname+window.location.search+window.location.hash })
-    ReactGA.pageview(window.location.pathname+window.location.search+window.location.hash)
-}
-export const logEvent = (category = '', action = '') => {
+    const pagePath = window.location.pathname + window.location.search + window.location.hash;
+    ReactGA.set({ page: pagePath });
+    ReactGA.pageview(pagePath);
+};
+
+// Log a custom event
+export const logCustomEvent = (category, action) => {
     if (category && action) {
-        ReactGA.event({ category, action })
+        ReactGA.event({ category, action });
     }
-}
-export const logException = (description = '', fatal = false) => {
+};
+
+// Log exceptions
+export const logException = (description, isFatal = false) => {
     if (description) {
-        ReactGA.exception({ description, fatal })
+        ReactGA.exception({ description, fatal: isFatal });
     }
-}
+};

@@ -10,7 +10,7 @@ import Awards from './Awards';
 import Projects from './Projects';
 import Footer from './Footer';
 const App = () => {
-  ga.initGA();
+  ga.initializeGoogleAnalytics();
   useEffect(() => {
     ga.logPageView();
   }, []);
