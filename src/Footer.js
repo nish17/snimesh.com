@@ -14,10 +14,10 @@ const Footer = () => {
       <h5 className='copyright'>
         © {getYear()}{' '}
         <a
-          href='https://twitter.com/NimeshS17'
+          href='https://x.com/0xnish17'
           onClick={() => ga.logCustomEvent('footer', 'Twitter')}
         >
-          @NimeshS17
+          @0xnish17
         </a>
       </h5>
     </div>

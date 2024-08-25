@@ -1,6 +1,15 @@
 import React from 'react';
 
 const NavBar = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const yOffset = -70; // Adjust this value based on your navbar height
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({top: y, behavior: 'smooth'});
+    }
+  };
+
   return (
     <div className='nav'>
       <input type='checkbox' id='nav-check' />
@@ -13,12 +22,12 @@ const NavBar = () => {
       </div>
       <div className='nav-collapse'>
         <div className='nav-links'>
-        <ul >
-          <li><a className='active' href='#home'>Home</a></li>
-          <li><a className='' href='#about'>Resume</a></li>
-          <li><a className='' href='#awards'>Awards</a></li>
-          <li><a className='' href='#projects'>Projects</a></li>
-          <li><a className='' onClick={() => ga.logCustomEvent('mailMe', 'Mail me in navbar')} href='mailto:nimesh3536@gmail.com'>Contact</a></li>
+        <ul>
+          <li><a onClick={() => scrollToSection('home')}>Home</a></li>
+          <li><a onClick={() => scrollToSection('about')}>Resume</a></li>
+          <li><a onClick={() => scrollToSection('awards')}>Awards</a></li>
+          <li><a onClick={() => scrollToSection('projects')}>Projects</a></li>
+          <li><a href='mailto:nimesh3536@gmail.com'>Contact</a></li>
           </ul>
         </div>
       </div>
@@ -27,27 +36,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-/* 
-    <header id='header'>
-      <nav id="nav-bar">
-          <ul>
-            <li className='nav-link'>
-              <a href='mailto:nimesh3536@gmail.com'>Contact</a>
-            </li>
-            <li className='nav-link'>
-              <a href='#projects'>Projects</a>
-            </li>
-            <li className='nav-link'>
-              <a href='#awards'>Awards</a>
-            </li>
-            <li className='nav-link'>
-              <a href='#about'>Resume</a>
-            </li>
-            <li className='nav-link'>
-              <a href='#home'>Home</a>
-            </li>
-          </ul>
-        </nav>
-    </header>
-*/
