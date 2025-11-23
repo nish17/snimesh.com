@@ -9,6 +9,8 @@ import AboutMe from './AboutMe';
 import Awards from './Awards';
 import Projects from './Projects';
 import Footer from './Footer';
+import { ThemeProvider } from './ThemeContext';
+
 const App = () => {
   ga.initializeGoogleAnalytics();
   useEffect(() => {
@@ -16,30 +18,32 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <div className='page-border'></div>
-      <Navbar />
-      <div className='main-container'>
-        <section id='home'>
-          <Home />
-        </section>
+    <ThemeProvider>
+      <div>
+        <div className='page-border'></div>
+        <Navbar />
+        <div className='main-container'>
+          <section id='home'>
+            <Home />
+          </section>
 
-        <section id='about'>
-          <AboutMe />
-        </section>
+          <section id='about'>
+            <AboutMe />
+          </section>
 
-        <section id='awards'>
-          <Awards />
-        </section>
+          <section id='awards'>
+            <Awards />
+          </section>
 
-        <section id='projects'>
-          <Projects />
+          <section id='projects'>
+            <Projects />
+          </section>
+        </div>
+        <section id='footer'>
+          <Footer />
         </section>
       </div>
-      <section id='footer'>
-        <Footer />
-      </section>
-    </div>
+    </ThemeProvider>
   );
 };
 
