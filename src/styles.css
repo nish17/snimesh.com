@@ -37,6 +37,8 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 125px;
 }
 
 #home {
@@ -60,7 +62,7 @@ html {
 #about,
 #awards,
 #projects {
-  padding-top: 8%;
+  padding-top: 120px;
 }
 
 .dark-mode {
@@ -98,14 +100,11 @@ html {
 }
 
 .main-container {
-  overflow: hidden;
   position: relative;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   max-width: 1356px;
-  scroll-snap-type: y proximity;
-  /* Changed from mandatory to proximity */
   /* border: 2px solid magenta; */
 }
 
@@ -135,9 +134,11 @@ html {
   background-color: rgb(255, 255, 255);
   position: fixed;
   height: 50px;
-  width: 100%;
-  right: 0;
-  z-index: 100;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  z-index: 2000;
+  width: auto;
 }
 
 .nav>.nav-btn {
@@ -489,6 +490,7 @@ html {
   body {
     background-color: lightblue;
     font-family: 'Roboto Mono';
+    scroll-padding-top: 85px;
   }
 
   .main-container {
@@ -500,7 +502,7 @@ html {
   .awards,
   .projects {
     scroll-snap-align: start;
-    padding-top: 8%;
+    padding-top: 80px;
   }
 
   .page-border {
@@ -640,9 +642,12 @@ html {
   }
 
   .nav {
-    top: 0;
+    top: 15px;
+    left: 15px;
+    right: 15px;
     margin: 10px 0 10px 10px;
     padding: 5%;
+    width: auto;
   }
 
   .nav>.nav-btn {

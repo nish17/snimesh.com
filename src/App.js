@@ -18,9 +18,9 @@ const App = () => {
   return (
     <div>
       <div className='page-border'></div>
+      <Navbar />
       <div className='main-container'>
         <section id='home'>
-          <Navbar />
           <Home />
         </section>
 
