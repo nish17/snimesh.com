@@ -1,7 +1,15 @@
 export const experiences = [
+  // {
+  //   "from": "August 2025",
+  //   "to": "Present",
+  //   "role": "SSE",
+  //   "company": "BrowserStack",
+  //   "url": "https://www.browserstack.com/",
+  //   "description": ""
+  // },
   {
     "from": "November 2022",
-    "to": "Present",
+    "to": "April 2025",
     "role": "SDE-2",
     "company": "Nova Benefits",
     "url": "https://www.novabenefits.com/",
@@ -23,20 +31,20 @@ export const experiences = [
     "url": "https://www.tapchief.com/",
     "description": "For the major part of the internship, I worked on building the onboarding flow for businesses and consultants (i.e. users). Also helped the company to deploy it on Heroku."
   },
-  {
-    "from": "June 2019",
-    "to": "July 2019",
-    "role": "SDE Intern",
-    "company": "Winimy AI",
-    "url": "https://www.winimy.ai/",
-    "description": "I worked on developing voice applications on Amazon Alexa for Dominos. I also developed the Hindi Alexa skill for Isha Sadhguru."
-},
-  {
-    "from": "January 2019",
-    "to": "January 2019",
-    "role": "Backend Developer Intern",
-    "company": "Expresso Labs",
-    "url": "https://www.espressolabs.in/",
-    "description": "Explored JOVO Framework for cross-platform development of voice application. I also developed a grocery store voice application on Amazon Alexa."
-  }
+  // {
+  //   "from": "June 2019",
+  //   "to": "July 2019",
+  //   "role": "SDE Intern",
+  //   "company": "Winimy AI",
+  //   "url": "https://www.winimy.ai/",
+  //   "description": "I worked on developing voice applications on Amazon Alexa for Dominos. I also developed the Hindi Alexa skill for Isha Sadhguru."
+  // },
+  // {
+  //   "from": "January 2019",
+  //   "to": "January 2019",
+  //   "role": "Backend Developer Intern",
+  //   "company": "Expresso Labs",
+  //   "url": "https://www.espressolabs.in/",
+  //   "description": "Explored JOVO Framework for cross-platform development of voice application. I also developed a grocery store voice application on Amazon Alexa."
+  // }
 ];

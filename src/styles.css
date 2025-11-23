@@ -33,10 +33,17 @@ body {
   font-family: 'Roboto Mono';
   margin: 0;
   padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 125px;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
 }
 
 #home {
@@ -49,6 +56,7 @@ html {
 .main-container {
   scroll-snap-type: y mandatory;
 }
+
 .text-center,
 .aboutMe-container,
 .awards-container,
@@ -59,7 +67,7 @@ html {
 #about,
 #awards,
 #projects {
-  padding-top: 8%;
+  padding-top: 120px;
 }
 
 .dark-mode {
@@ -67,66 +75,43 @@ html {
   filter: invert(1) heu-rotate(180deg);
 }
 
-.left-line {
-  border-left: 30px solid #f26b38;
-  height: 100vh;
+.page-border {
   position: fixed;
-  left: 0;
+  inset: 0;
+  border: 30px solid var(--border-color);
   z-index: 1000;
-}
-
-.right-line {
-  border-right: 30px solid #f26b38;
-  height: 100vh;
-  position: fixed;
-  right: 0;
-  z-index: 1000;
-}
-
-.top-line {
-  border-top: 30px solid #f26b38;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  position: sticky;
-}
-
-.bottom-line {
-  border-bottom: 30px solid #f26b38;
-  width: 100%;
-  bottom: 0;
-  z-index: 1000;
-  position: fixed;
+  pointer-events: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  color: black;
+  color: var(--text-color);
   font-family: 'Roboto Mono';
-  background-color: white;
+  background-color: var(--footer-bg-color);
   align-items: center;
   justify-content: center;
   margin-bottom: 35px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.footer > h5 {
+.footer>h5 {
   margin: 0;
   padding: 0;
 }
 
-.footer > .love > .heart {
+.footer>.love>.heart {
   color: #a83f39;
 }
 
 .main-container {
-  overflow: hidden;
   position: relative;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   max-width: 1356px;
-  scroll-snap-type: y proximity; /* Changed from mandatory to proximity */
   /* border: 2px solid magenta; */
 }
 
@@ -147,61 +132,66 @@ html {
   flex-direction: column;
 }
 
-.text-center > h5 {
+.text-center>h5 {
   font-family: 'Roboto Mono';
   font-size: 1.5rem;
 }
 
 .nav {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--nav-bg-color);
   position: fixed;
   height: 50px;
-  width: 100%;
-  right: 0;
-  z-index: 100;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  z-index: 2000;
+  width: auto;
+  transition: background-color 0.3s ease;
 }
 
-.nav > .nav-btn {
+.nav>.nav-btn {
   display: none;
 }
+
 .nav-collapse {
   width: 100%;
 }
 
-.nav-collapse > .nav-links {
+.nav-collapse>.nav-links {
   font-size: 1em;
   font-family: 'Roboto Mono';
   margin-right: 30px;
   height: 50px;
 }
 
-.nav-links > ul {
+.nav-links>ul {
   display: flex;
   list-style-type: none;
   align-items: center;
   justify-content: flex-end;
 }
 
-.nav-links > ul > li {
+.nav-links>ul>li {
   margin: 10px 30px 0 0;
 }
 
-.nav-links > ul > li > a {
+.nav-links>ul>li>a {
   color: var(--text-color);
   text-decoration: none;
   cursor: pointer;
 }
 
-.nav > .nav-collapse > .nav-links > ul > .active {
+.nav>.nav-collapse>.nav-links>ul>.active {
   color: var(--active-nav-color);
   text-emphasis: var(--text);
 }
-.nav-links > ul > li > a:hover {
+
+.nav-links>ul>li>a:hover {
   color: var(--active-nav-color);
   text-decoration: none;
 }
 
-.nav > #nav-check {
+.nav>#nav-check {
   display: none;
 }
 
@@ -237,6 +227,7 @@ html {
   width: 150px;
   height: 150px;
 }
+
 .content-1 {
   padding-right: 1rem;
   grid-row: 2/4;
@@ -254,17 +245,18 @@ html {
   justify-self: flex-start;
 }
 
-.button-1 > a {
-  background-color: #f26b38;
+.button-1>a {
+  background-color: var(--primary-color);
   color: white;
   padding: 8px;
   border: 2px solid #fff;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.button-1 > a:hover {
-  background-color: white;
-  color: #f26b38;
-  border: 1px solid #f26b38;
+.button-1>a:hover {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   text-decoration: none;
 }
 
@@ -281,11 +273,12 @@ html {
 
 .small-box {
   display: inline;
-  border: 1px solid #f26b38;
-  color: #f26b38;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
   font-family: 'Roboto Mono';
   font-size: small;
 }
+
 .education {
   padding-left: 15%;
   font-family: 'Roboto Mono';
@@ -296,25 +289,25 @@ html {
   padding-left: 15%;
   font-family: 'Roboto Mono';
   font-weight: bolder;
-  border-left: 1px solid #f26b38;
+  border-left: 1px solid var(--border-color);
 }
 
-.experience > h3,
-.education > h3,
-.about-title-1 > h3,
-.projects > h3,
-.awards > h3 {
+.experience>h3,
+.education>h3,
+.about-title-1>h3,
+.projects>h3,
+.awards>h3 {
   display: inline;
   font-size: 13px;
   margin-left: 3%;
   font-family: 'Roboto Mono';
-  box-shadow: inset 0 -6px 0px #ede574;
+  box-shadow: inset 0 -6px 0px var(--secondary-color);
 }
 
 .card-title-1 {
   margin-top: 15px;
   margin-bottom: 15px;
-  color: #141414;
+  color: var(--text-color);
 }
 
 .card-desc-1 {
@@ -334,12 +327,14 @@ html {
   justify-content: space-around;
 }
 
-.github-card, .stackoverflow-card {
+.github-card,
+.stackoverflow-card {
   flex: 1;
   max-width: 400px;
 }
 
-.gh-card, .so-card {
+.gh-card,
+.so-card {
   flex: 1;
   width: 100%;
   height: 100%;
@@ -365,19 +360,16 @@ html {
   margin-bottom: 10%;
 }
 
-.projects-container > .project-1,
-.projects-container > .project-2,
-.projects-container > .project-3,
-.projects-container > .project-4 {
+.project-card {
   flex: 1;
   display: grid;
   width: max-content;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
   grid-template-rows: repeat(3, minmax(50px, 1fr));
-  border-top: 5px solid #f26b38;
-  border-left: 1px solid #dfdfdf;
-  border-right: 1px solid #dfdfdf;
-  border-bottom: 1px solid #dfdfdf;
+  border-top: 5px solid var(--border-color);
+  border-left: 1px solid var(--card-border-color);
+  border-right: 1px solid var(--card-border-color);
+  border-bottom: 1px solid var(--card-border-color);
   padding: 20px;
   margin: 1%;
 }
@@ -390,7 +382,7 @@ html {
 
 .tech-title {
   font-size: 13px;
-  color: #757575;
+  color: var(--tech-title-color);
   font-weight: bolder;
 }
 
@@ -398,23 +390,23 @@ html {
   width: 55px;
 }
 
-.project-title-1 {
+.project-title {
   grid-row: 1/2;
   font-size: 2em;
   align-self: center;
 }
 
-.tech-stack-1 {
+.tech-stack {
   grid-row: 2/3;
 }
 
-.project-desc-1 {
+.project-desc {
   grid-row: 3/4;
   grid-column: 1/3;
   text-align: justify;
 }
 
-.project-img-1 {
+.project-img {
   grid-row: 1/3;
   grid-column: 2/3;
   width: 100%;
@@ -423,26 +415,8 @@ html {
   padding: 7%;
   justify-self: flex-end;
   align-self: flex-start;
-}
-
-.project-img-2 {
-  grid-row: 1/3;
-  grid-column: 2/3;
-  justify-self: flex-end;
-  align-self: flex-start;
-  margin: 4%;
-  width: 60%;
-  height: auto;
-}
-
-.project-img-4 {
-  grid-row: 1/3;
-  grid-column: 2/3;
-  padding-left: 10%;
-  width: 60%;
-  height: auto;
-  justify-self: flex-end;
-  align-self: flex-start;
+  object-fit: contain;
+  max-height: 200px;
 }
 
 .awards {
@@ -460,23 +434,19 @@ html {
   margin: 2%;
 }
 
-.awards-container > .award-1,
-.awards-container > .award-2,
-.awards-container > .award-3,
-.awards-container > .award-4,
-.awards-container > .award-5,
-.awards-container > .award-6 {
+.award-card {
   flex: 1;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, minmax(211px, 1fr));
-  border-top: 5px solid #f26b38;
-  border-left: 1px solid #dfdfdf;
-  border-right: 1px solid #dfdfdf;
-  border-bottom: 1px solid #dfdfdf;
+  border-top: 5px solid var(--border-color);
+  border-left: 1px solid var(--card-border-color);
+  border-right: 1px solid var(--card-border-color);
+  border-bottom: 1px solid var(--card-border-color);
   padding: 20px;
   margin: 0.5%;
 }
+
 .award-left-side {
   grid-column: 1/2;
   padding: 5%;
@@ -488,7 +458,7 @@ html {
   display: grid;
 }
 
-.award-img-1 {
+.award-img {
   padding: 2%;
   margin-top: 5%;
   width: 100%;
@@ -496,42 +466,14 @@ html {
   border-radius: 10%;
   justify-self: flex-end;
   align-self: flex-start;
-}
-
-.award-img-2 {
-  justify-self: flex-end;
-  align-self: flex-start;
-  margin-top: 4%;
-  width: 90%;
-  height: auto;
-}
-
-.award-img-3 {
-  margin-top: 10%;
-  width: 80%;
-  height: auto;
-  justify-self: flex-end;
-  align-self: flex-start;
-}
-
-.award-img-4 {
-  width: 80%;
-  height: auto;
-  justify-self: flex-end;
-  align-self: flex-start;
-}
-
-.award-img-5 {
-  width: 60%;
-  height: auto;
-  justify-self: flex-end;
-  align-self: flex-start;
+  object-fit: contain;
+  max-height: 150px;
 }
 
 .award-title {
   text-transform: uppercase;
   font-size: 18px;
-  color: #757575;
+  color: var(--award-title-color);
   font-weight: bolder;
 }
 
@@ -543,7 +485,7 @@ html {
   margin-top: 10%;
 }
 
-.award-link > div {
+.award-link>div {
   margin-top: 5%;
 }
 
@@ -555,8 +497,8 @@ html {
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: lightblue;
     font-family: 'Roboto Mono';
+    scroll-padding-top: 85px;
   }
 
   .main-container {
@@ -568,23 +510,11 @@ html {
   .awards,
   .projects {
     scroll-snap-align: start;
-    padding-top: 8%;
+    padding-top: 80px;
   }
 
-  .left-line {
-    border-left: 15px solid #f26b38;
-  }
-
-  .right-line {
-    border-right: 15px solid #f26b38;
-  }
-
-  .top-line {
-    border-top: 15px solid #f26b38;
-  }
-
-  .bottom-line {
-    border-bottom: 15px solid #f26b38;
+  .page-border {
+    border-width: 15px;
   }
 
   .main-container {
@@ -604,12 +534,14 @@ html {
     margin-left: 5%;
   }
 
-  .text-center > h1 {
+  .text-center>h1 {
     font-size: 6.4vw;
   }
-  .text-center > h5 {
+
+  .text-center>h5 {
     font-size: 4vw;
   }
+
   .grid-container {
     display: flex;
     flex-direction: column;
@@ -652,11 +584,11 @@ html {
     padding: 5%;
   }
 
-  .experience > h3,
-  .education > h3,
-  .about-title-1 > h3,
-  .projects > h3,
-  .awards > h3 {
+  .experience>h3,
+  .education>h3,
+  .about-title-1>h3,
+  .projects>h3,
+  .awards>h3 {
     margin-left: 9%;
     font-size: 11px;
     /* padding-top: 20%; */
@@ -672,20 +604,15 @@ html {
     padding: 6%;
   }
 
-  .awards-container > .award-1,
-  .awards-container > .award-2,
-  .awards-container > .award-3,
-  .awards-container > .award-4,
-  .awards-container > .award-5,
-  .awards-container > .award-6 {
+  .award-card {
     flex: 1;
     display: grid;
     width: max-content;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
-    border-top: 5px solid #f26b38;
-    border-left: 1px solid #dfdfdf;
-    border-right: 1px solid #dfdfdf;
-    border-bottom: 1px solid #dfdfdf;
+    border-top: 5px solid var(--border-color);
+    border-left: 1px solid var(--card-border-color);
+    border-right: 1px solid var(--card-border-color);
+    border-bottom: 1px solid var(--card-border-color);
     padding: 5%;
     margin: 0.5%;
   }
@@ -694,21 +621,25 @@ html {
     font-size: 12px;
   }
 
-  .projects-container > .project-1,
-  .projects-container > .project-2,
-  .projects-container > .project-3,
-  .projects-container > .project-4 {
+  .project-card {
     flex: 1;
     display: grid;
     width: max-content;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
     grid-template-rows: repeat(3, minmax(50px, 1fr));
-    border-top: 5px solid #f26b38;
-    border-left: 1px solid #dfdfdf;
-    border-right: 1px solid #dfdfdf;
-    border-bottom: 1px solid #dfdfdf;
+    border-top: 5px solid var(--border-color);
+    border-left: 1px solid var(--card-border-color);
+    border-right: 1px solid var(--card-border-color);
+    border-bottom: 1px solid var(--card-border-color);
     padding: 5%;
     margin: 1%;
+  }
+
+  .project-title {
+    grid-row: 1/2;
+    font-size: 1.5em;
+    justify-content: flex-start;
+    align-self: flex-start;
   }
 
   .project-title-1 {
@@ -719,38 +650,45 @@ html {
   }
 
   .nav {
-    top: 0;
-    margin: 10px 0 10px 10px;
+    top: 15px;
+    left: 15px;
+    right: 15px;
     padding: 5%;
+    width: auto;
   }
-  .nav > .nav-btn {
+
+  .nav>.nav-btn {
     display: inline-block;
     position: absolute;
     right: 0px;
     top: 0px;
   }
-  .nav > .nav-btn > label {
+
+  .nav>.nav-btn>label {
     display: inline-block;
     width: 50px;
     height: 50px;
     padding: 13px;
     margin-right: 15px;
   }
-  .nav > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
+
+  .nav>.nav-btn>label:hover,
+  .nav #nav-check:checked~.nav-btn>label {
     background-color: rgba(255, 255, 255, 0);
   }
-  .nav > .nav-btn > label > span {
+
+  .nav>.nav-btn>label>span {
     display: block;
     width: 25px;
     height: 10px;
-    border-top: 2px solid #000;
+    border-top: 2px solid var(--text-color);
   }
-  .nav > .nav-collapse > .nav-links {
+
+  .nav>.nav-collapse>.nav-links {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #fdfdfd;
+    background-color: var(--nav-bg-color);
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -759,22 +697,24 @@ html {
     z-index: 2;
   }
 
-  .nav-links > ul {
+  .nav-links>ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .nav-links > ul > li {
+
+  .nav-links>ul>li {
     width: 100%;
     padding: 2%;
   }
 
-  .nav > #nav-check:not(:checked) ~ .nav-collapse > .nav-links {
+  .nav>#nav-check:not(:checked)~.nav-collapse>.nav-links {
     height: 0px;
   }
-  .nav > #nav-check:checked ~ .nav-collapse > .nav-links {
-    height: calc(100vh - 50px);
+
+  .nav>#nav-check:checked~.nav-collapse>.nav-links {
+    height: calc(100vh - 80px);
     overflow-y: auto;
     z-index: 2;
   }
@@ -782,19 +722,22 @@ html {
   .footer {
     margin-bottom: 20px;
   }
-  .footer > h5 {
+
+  .footer>h5 {
     font-size: 13px;
   }
-  
-  .footer > .love > .heart {
+
+  .footer>.love>.heart {
     color: #a83f39;
   }
 
 }
 
 :root {
-  --text: #5362f6; /* Blue */
-  --shadow: #c9a7dd; /* Pink */
+  --text: #5362f6;
+  /* Blue */
+  --shadow: #c9a7dd;
+  /* Pink */
 }
 
 .playful {
@@ -808,13 +751,14 @@ html {
   width: max-content;
   letter-spacing: 2px;
   position: relative;
-  color: black;
+  color: var(--text-color);
   font-family: 'Roboto Mono';
   font-weight: bold;
   font-size: 4.8vw;
   animation: glitch-skew 1s infinite linear alternate-reverse;
   flex: 1;
 }
+
 .glitch::before {
   content: attr(data-text);
   position: absolute;
@@ -827,6 +771,7 @@ html {
   clip: rect(44px, 450px, 56px, 0);
   animation: glitch-anim 5s infinite linear alternate-reverse;
 }
+
 .glitch::after {
   content: attr(data-text);
   position: absolute;
@@ -844,204 +789,256 @@ html {
     clip: rect(7px, 9999px, 59px, 0);
     transform: skew(0.48deg);
   }
+
   5% {
     clip: rect(11px, 9999px, 40px, 0);
     transform: skew(0.45deg);
   }
+
   10% {
     clip: rect(86px, 9999px, 100px, 0);
     transform: skew(0.8deg);
   }
+
   15% {
     clip: rect(96px, 9999px, 75px, 0);
     transform: skew(0.82deg);
   }
+
   20% {
     clip: rect(44px, 9999px, 12px, 0);
     transform: skew(0.32deg);
   }
+
   25% {
     clip: rect(44px, 9999px, 87px, 0);
     transform: skew(0.43deg);
   }
+
   30% {
     clip: rect(63px, 9999px, 17px, 0);
     transform: skew(0.8deg);
   }
+
   35% {
     clip: rect(77px, 9999px, 48px, 0);
     transform: skew(0.11deg);
   }
+
   40% {
     clip: rect(32px, 9999px, 95px, 0);
     transform: skew(0.51deg);
   }
+
   45% {
     clip: rect(11px, 9999px, 77px, 0);
     transform: skew(0.84deg);
   }
+
   50% {
     clip: rect(80px, 9999px, 21px, 0);
     transform: skew(0.32deg);
   }
+
   55% {
     clip: rect(84px, 9999px, 94px, 0);
     transform: skew(0.13deg);
   }
+
   60% {
     clip: rect(11px, 9999px, 30px, 0);
     transform: skew(0.71deg);
   }
+
   65% {
     clip: rect(17px, 9999px, 3px, 0);
     transform: skew(0.87deg);
   }
+
   70% {
     clip: rect(17px, 9999px, 63px, 0);
     transform: skew(0.94deg);
   }
+
   75% {
     clip: rect(57px, 9999px, 68px, 0);
     transform: skew(0.47deg);
   }
+
   80% {
     clip: rect(95px, 9999px, 56px, 0);
     transform: skew(0.56deg);
   }
+
   85% {
     clip: rect(94px, 9999px, 7px, 0);
     transform: skew(0.25deg);
   }
+
   90% {
     clip: rect(57px, 9999px, 66px, 0);
     transform: skew(0.79deg);
   }
+
   95% {
     clip: rect(83px, 9999px, 50px, 0);
     transform: skew(0.49deg);
   }
+
   100% {
     clip: rect(56px, 9999px, 54px, 0);
     transform: skew(0.88deg);
   }
 }
+
 @keyframes glitch-anim2 {
   0% {
     clip: rect(66px, 9999px, 9px, 0);
     transform: skew(0.61deg);
   }
+
   5% {
     clip: rect(1px, 9999px, 33px, 0);
     transform: skew(0.86deg);
   }
+
   10% {
     clip: rect(58px, 9999px, 24px, 0);
     transform: skew(0.08deg);
   }
+
   15% {
     clip: rect(74px, 9999px, 44px, 0);
     transform: skew(0.41deg);
   }
+
   20% {
     clip: rect(93px, 9999px, 71px, 0);
     transform: skew(0.9deg);
   }
+
   25% {
     clip: rect(61px, 9999px, 57px, 0);
     transform: skew(0.31deg);
   }
+
   30% {
     clip: rect(41px, 9999px, 42px, 0);
     transform: skew(0.06deg);
   }
+
   35% {
     clip: rect(39px, 9999px, 46px, 0);
     transform: skew(0.17deg);
   }
+
   40% {
     clip: rect(1px, 9999px, 45px, 0);
     transform: skew(0.25deg);
   }
+
   45% {
     clip: rect(14px, 9999px, 82px, 0);
     transform: skew(0.25deg);
   }
+
   50% {
     clip: rect(28px, 9999px, 23px, 0);
     transform: skew(0.58deg);
   }
+
   55% {
     clip: rect(74px, 9999px, 19px, 0);
     transform: skew(0.6deg);
   }
+
   60% {
     clip: rect(88px, 9999px, 77px, 0);
     transform: skew(0.46deg);
   }
+
   65% {
     clip: rect(97px, 9999px, 1px, 0);
     transform: skew(0.99deg);
   }
+
   70% {
     clip: rect(51px, 9999px, 70px, 0);
     transform: skew(0.02deg);
   }
+
   75% {
     clip: rect(54px, 9999px, 44px, 0);
     transform: skew(0.67deg);
   }
+
   80% {
     clip: rect(53px, 9999px, 79px, 0);
     transform: skew(0.68deg);
   }
+
   85% {
     clip: rect(49px, 9999px, 4px, 0);
     transform: skew(0.21deg);
   }
+
   90% {
     clip: rect(7px, 9999px, 24px, 0);
     transform: skew(0.06deg);
   }
+
   95% {
     clip: rect(5px, 9999px, 1px, 0);
     transform: skew(0.2deg);
   }
+
   100% {
     clip: rect(34px, 9999px, 92px, 0);
     transform: skew(0.84deg);
   }
 }
+
 @keyframes glitch-skew {
   0% {
     transform: skew(-1deg);
   }
+
   10% {
     transform: skew(3deg);
   }
+
   20% {
     transform: skew(-2deg);
   }
+
   30% {
     transform: skew(1deg);
   }
+
   40% {
     transform: skew(4deg);
   }
+
   50% {
     transform: skew(-2deg);
   }
+
   60% {
     transform: skew(4deg);
   }
+
   70% {
     transform: skew(3deg);
   }
+
   80% {
     transform: skew(0deg);
   }
+
   90% {
     transform: skew(3deg);
   }
+
   100% {
     transform: skew(1deg);
   }
