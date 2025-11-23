@@ -17,10 +17,7 @@ const App = () => {
 
   return (
     <div>
-      <div className='top-line'></div>
-      <div className='left-line'></div>
-      <div className='right-line'></div>
-      <div className='bottom-line'></div>
+      <div className='page-border'></div>
       <div className='main-container'>
         <section id='home'>
           <Navbar />
