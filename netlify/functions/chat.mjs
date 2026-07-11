@@ -92,6 +92,20 @@ function jsonResponse(body, status) {
   });
 }
 
+// A `grounded: false` line can mean either a lexically-mismatched-but-answerable
+// question or a genuinely out-of-scope one — the log alone can't distinguish
+// these; reviewing them for R7 requires judgment, not just a keyword scan.
+function logQuestion({ sessionId, message, grounded, providerError = false }) {
+  const entry = {
+    timestamp: new Date().toISOString(),
+    sessionId: sessionId || null,
+    question: message,
+    grounded,
+  };
+  if (providerError) entry.providerError = true;
+  console.log(JSON.stringify(entry));
+}
+
 async function callProvider({ url, apiKey, model, systemPrompt, message, signal }) {
   const res = await fetch(url, {
     method: 'POST',
@@ -175,11 +189,14 @@ export default async (req) => {
     return jsonResponse({ error: 'Invalid message' }, 400);
   }
 
+  const sessionId = typeof body.sessionId === 'string' ? body.sessionId.trim() : undefined;
+
   const facts = loadFacts();
   const topChunks = retrieveChunks(message, facts);
   const bestScore = topChunks[0]?.score ?? 0;
 
   if (bestScore < RETRIEVAL_THRESHOLD) {
+    logQuestion({ sessionId, message, grounded: false });
     return jsonResponse({ reply: REFUSAL_MESSAGE, grounded: false }, 200);
   }
 
@@ -189,10 +206,23 @@ export default async (req) => {
   try {
     reply = await getReply(systemPrompt, message);
   } catch {
+    logQuestion({ sessionId, message, grounded: false, providerError: true });
     return jsonResponse({ reply: PROVIDER_FAILURE_MESSAGE, grounded: false }, 200);
   }
 
+  logQuestion({ sessionId, message, grounded: true });
   return jsonResponse({ reply, grounded: true }, 200);
 };
 
-export const config = { path: '/api/chat' };
+export const config = {
+  path: '/api/chat',
+  rateLimit: {
+    // Sized generously above expected volume (~10 recruiters, 2-3 messages
+    // each) — this exists to stop a single bad actor, not to police
+    // legitimate traffic. 180s is the platform's maximum window size.
+    windowLimit: 10,
+    windowSize: 180,
+    aggregateBy: ['ip', 'domain'],
+    action: 'block',
+  },
+};

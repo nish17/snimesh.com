@@ -1,6 +1,6 @@
 import { test, beforeEach, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
-import handler, { tokenize, scoreChunk, retrieveChunks, buildSystemPrompt } from './chat.mjs';
+import handler, { tokenize, scoreChunk, retrieveChunks, buildSystemPrompt, config } from './chat.mjs';
 
 const ALLOWED_ORIGIN = 'https://www.snimesh.com';
 
@@ -24,6 +24,8 @@ function groqSuccessResponse(content) {
 let originalFetch;
 let originalGroqKey;
 let originalOpenRouterKey;
+let originalConsoleLog;
+let loggedLines;
 
 beforeEach(() => {
   originalFetch = globalThis.fetch;
@@ -31,12 +33,17 @@ beforeEach(() => {
   originalOpenRouterKey = process.env.OPENROUTER_API_KEY;
   process.env.GROQ_API_KEY = 'test-groq-key';
   process.env.OPENROUTER_API_KEY = 'test-openrouter-key';
+
+  originalConsoleLog = console.log;
+  loggedLines = [];
+  console.log = (line) => loggedLines.push(line);
 });
 
 afterEach(() => {
   globalThis.fetch = originalFetch;
   process.env.GROQ_API_KEY = originalGroqKey;
   process.env.OPENROUTER_API_KEY = originalOpenRouterKey;
+  console.log = originalConsoleLog;
 });
 
 // --- Unit tests for pure retrieval helpers ---
@@ -175,4 +182,38 @@ test('error path: a request with a mismatched Origin header is rejected before a
 
   assert.equal(res.status, 403);
   assert.equal(fetchCalled, false);
+});
+
+// --- Unit 3: observability and abuse protection ---
+
+test('a successful request emits exactly one log line containing the question text and grounded: true', async () => {
+  globalThis.fetch = async () => groqSuccessResponse('He built the PDPU Scheduler using Google Assistant.');
+
+  const message = 'Tell me about the PDPU Scheduler project and Google Assistant.';
+  const req = makeRequest(message);
+  await handler(req);
+
+  assert.equal(loggedLines.length, 1);
+  const entry = JSON.parse(loggedLines[0]);
+  assert.equal(entry.question, message);
+  assert.equal(entry.grounded, true);
+  assert.ok(entry.timestamp);
+});
+
+test('a refused (ungrounded) request emits a log line with grounded: false', async () => {
+  const message = 'Can you recommend a good pizza restaurant nearby?';
+  const req = makeRequest(message);
+  await handler(req);
+
+  assert.equal(loggedLines.length, 1);
+  const entry = JSON.parse(loggedLines[0]);
+  assert.equal(entry.question, message);
+  assert.equal(entry.grounded, false);
+});
+
+test('the exported config.rateLimit object is present and valid', () => {
+  assert.ok(config.rateLimit);
+  assert.equal(typeof config.rateLimit.windowLimit, 'number');
+  assert.ok(config.rateLimit.windowSize <= 180);
+  assert.ok(config.rateLimit.aggregateBy.includes('ip'));
 });
