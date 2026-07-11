@@ -1,11 +1,11 @@
 [
   {
     "id": "edu-1",
-    "text": "Nimesh holds a B.Tech in Information & Communication Technology from Pandit Deendayal Petroleum University (PDPU) in Gandhinagar, India, completed between August 2016 and June 2020. His education background is in information and communication technology engineering."
+    "text": "Nimesh holds a B.Tech in Information & Communication Technology from Pandit Deendayal Petroleum University (PDPU) in Gandhinagar, India, completed between August 2016 and June 2020. His education background, school, and college is in information and communication technology engineering."
   },
   {
     "id": "work-1",
-    "text": "Nimesh worked as an SDE-2 (Software Development Engineer 2) at Nova Benefits from November 2022 to April 2025. He built a notification engine from scratch and scaled its capacity 6x monthly to support a 10x increase in the client base. He also integrated third-party insurance APIs, which reduced claim processing time by 30 minutes per claim for the claims associates team."
+    "text": "Nimesh worked as an SDE-2 (Software Development Engineer 2) at Nova Benefits from November 2022 to April 2025, one of the companies and employers he has worked for. He built a notification engine from scratch and scaled its capacity 6x monthly to support a 10x increase in the client base. He also integrated third-party insurance APIs, which reduced claim processing time by 30 minutes per claim for the claims associates team."
   },
   {
     "id": "work-2",
@@ -17,19 +17,19 @@
   },
   {
     "id": "skill-1",
-    "text": "Nimesh's core backend skill set centers on Node.js, TypeScript, GraphQL, and PostgreSQL, built up across his software engineering roles at Nova Benefits and earlier internships. He has professional backend engineering experience dating back to November 2020."
+    "text": "Nimesh's core backend skill set, tech stack, and programming languages center on Node.js, TypeScript, GraphQL, and PostgreSQL, built up across his software engineering roles at Nova Benefits and earlier internships. He has around 5 years of professional backend engineering experience dating back to November 2020."
   },
   {
     "id": "skill-2",
-    "text": "On the frontend, Nimesh has experience with React, Vue2, and Angular. He also has voice-interface (VUI) development experience building applications for Google Assistant, Amazon Alexa, and Samsung Bixby."
+    "text": "On the frontend, Nimesh's tech stack and programming languages include React, Vue2, and Angular. He also has voice-interface (VUI) development experience building applications for Google Assistant, Amazon Alexa, and Samsung Bixby."
   },
   {
     "id": "skill-3",
-    "text": "Nimesh has hands-on experience with cloud and integration technologies including AWS, Firebase Cloud Functions, Twilio, and DialogFlow, primarily through his personal projects and voice-application work."
+    "text": "Nimesh has hands-on experience with cloud and integration technologies including AWS, Firebase Cloud Functions, Twilio, and DialogFlow, primarily through his personal side projects and voice-application work."
   },
   {
     "id": "proj-1",
-    "text": "Nimesh built Big Basket Notifier, a Node.js tool created during COVID-19 that notified users when a grocery delivery slot became available on BigBasket. It used Twilio for notifications, ran on AWS, and was built by reverse-engineering BigBasket's API using Chrome Dev Tools."
+    "text": "Nimesh built Big Basket Notifier, a personal side project and Node.js tool created during COVID-19 that notified users when a grocery delivery slot became available on BigBasket. It used Twilio for notifications, ran on AWS, and was built by reverse-engineering BigBasket's API using Chrome Dev Tools."
   },
   {
     "id": "proj-2",
@@ -45,7 +45,7 @@
   },
   {
     "id": "award-1",
-    "text": "Nimesh received the 'Rising Star in Voice' award at the Inside Voice Podcast Awards, part of VOICE Summit 2019, recognizing his early work and speaking in the voice-technology (VUI) community."
+    "text": "Nimesh received the 'Rising Star in Voice' award, one of several awards and honors, at the Inside Voice Podcast Awards, part of VOICE Summit 2019, recognizing his early work and speaking in the voice-technology (VUI) community."
   },
   {
     "id": "award-2",
@@ -57,11 +57,11 @@
   },
   {
     "id": "award-4",
-    "text": "Nimesh was a tech speaker at DevFest Ahmedabad in both 2019 and 2018, organized by GDG (Google Developer Group) Ahmedabad, speaking on voice user interface (VUI) design best practices and related topics."
+    "text": "Nimesh has given talks and presentations as a tech speaker at DevFest Ahmedabad in both 2019 and 2018, organized by GDG (Google Developer Group) Ahmedabad, speaking on voice user interface (VUI) design best practices and related topics."
   },
   {
     "id": "award-5",
-    "text": "Nimesh conducted an Alexa Skill Development workshop at PDPU's TechFest 2019, teaching students how to build voice applications for Amazon Alexa."
+    "text": "Nimesh conducted an Alexa Skill Development workshop and talk at PDPU's TechFest 2019, teaching students how to build voice applications for Amazon Alexa."
   },
   {
     "id": "about-1",

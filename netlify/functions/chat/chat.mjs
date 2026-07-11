@@ -10,12 +10,28 @@ const FACTS_PATH = fileURLToPath(new URL('../../../knowledge/facts.json', import
 
 const ALLOWED_HOSTS = new Set(['snimesh.com', 'www.snimesh.com', 'localhost', '127.0.0.1']);
 const MAX_MESSAGE_LENGTH = 1000;
-// Starting value only — expected to be tuned via the pre-launch paraphrase check
-// described in this unit's Verification section, then further refined post-launch
-// via real recruiter questions (R7 feedback loop).
-const RETRIEVAL_THRESHOLD = 2;
+// Tuned via the pre-launch paraphrase check (see this unit's Verification
+// section): a length filter alone left most natural, clearly-answerable
+// questions ("does he know react?", "what companies has he worked at?")
+// with only 0-1 real content-word matches after removing 3-letter noise
+// like "the"/"has"/"his". A curated stopword list (below) removes those
+// noise words directly, which makes a single strong content-word match a
+// safe enough bar -- expect further tuning via real recruiter questions
+// (R7 feedback loop).
+const RETRIEVAL_THRESHOLD = 1;
 const TOP_N_CHUNKS = 4;
 const LLM_TIMEOUT_MS = 5500;
+
+// Common function/auxiliary words that survive a pure length filter (3+
+// chars) but carry no topical signal -- left in, they let an unrelated
+// question "match" a chunk on words like "the" or "has" alone.
+const STOPWORDS = new Set([
+  'the', 'and', 'for', 'with', 'his', 'her', 'has', 'have', 'had', 'was',
+  'were', 'did', 'does', 'who', 'how', 'why', 'any', 'you', 'your', 'are',
+  'this', 'that', 'these', 'those', 'from', 'into', 'out', 'about', 'him',
+  'she', 'they', 'them', 'their', 'its', 'been', 'being', 'would', 'could',
+  'should', 'will', 'can', 'not', 'but', 'yet', 'all', 'get', 'got',
+]);
 
 const REFUSAL_MESSAGE =
   "I don't have that info. Please reach out to Nimesh directly at nimesh3536@gmail.com and he'll be happy to help.";
@@ -38,11 +54,12 @@ export function tokenize(text) {
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, ' ')
     .split(/\s+/)
-    // Drop very short tokens (a, is, of, to, ...) — not a curated stopword
-    // list, just a length filter, so it stays dependency-free and simple.
-    // Without it, filler-word overlap alone can push unrelated questions
-    // above the retrieval threshold.
-    .filter((token) => token.length >= 3);
+    // Drop very short tokens (a, is, of, to, ...) and common function words
+    // (the, has, does, ...). Still no stemming -- "engineer" and
+    // "engineering" remain distinct tokens -- but pure length filtering
+    // wasn't enough: several 3-4 letter words carry no topical signal and
+    // were inflating scores on off-topic questions.
+    .filter((token) => token.length >= 3 && !STOPWORDS.has(token));
 }
 
 export function scoreChunk(questionTokens, chunkTokens) {
