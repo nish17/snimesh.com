@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 // this function, and a locally declared const of the same name collides
 // with it at module-evaluation time ("Identifier '__dirname' has already
 // been declared").
-const FACTS_PATH = fileURLToPath(new URL('../../knowledge/facts.json', import.meta.url));
+const FACTS_PATH = fileURLToPath(new URL('../../../knowledge/facts.json', import.meta.url));
 
 const ALLOWED_HOSTS = new Set(['snimesh.com', 'www.snimesh.com', 'localhost', '127.0.0.1']);
 const MAX_MESSAGE_LENGTH = 1000;
