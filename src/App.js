@@ -10,6 +10,7 @@ import Awards from './Awards';
 import Projects from './Projects';
 import Footer from './Footer';
 import { ThemeProvider } from './ThemeContext';
+import ChatWidget from './ChatWidget';
 
 const App = () => {
   ga.initializeGoogleAnalytics();
@@ -42,6 +43,7 @@ const App = () => {
         <section id='footer'>
           <Footer />
         </section>
+        <ChatWidget />
       </div>
     </ThemeProvider>
   );
