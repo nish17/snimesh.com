@@ -1,0 +1,74 @@
+[
+  {
+    "id": "edu-1",
+    "text": "Nimesh holds a B.Tech in Information & Communication Technology from Pandit Deendayal Petroleum University (PDPU) in Gandhinagar, India, completed between August 2016 and June 2020. His education background is in information and communication technology engineering."
+  },
+  {
+    "id": "work-1",
+    "text": "Nimesh worked as an SDE-2 (Software Development Engineer 2) at Nova Benefits from November 2022 to April 2025. He built a notification engine from scratch and scaled its capacity 6x monthly to support a 10x increase in the client base. He also integrated third-party insurance APIs, which reduced claim processing time by 30 minutes per claim for the claims associates team."
+  },
+  {
+    "id": "work-2",
+    "text": "Before that, Nimesh worked as an SDE-1 (Software Development Engineer 1) at Nova Benefits from November 2020 to November 2022. He worked across both frontend and backend: frontend with Vue2, and backend with a GraphQL API on Postgres using TypeScript. He also helped the company integrate RASA as the NLU (natural language understanding) layer in one of its internal applications."
+  },
+  {
+    "id": "work-3",
+    "text": "Nimesh's first professional experience was as an SDE Intern at TapChief from January 2020 to April 2020, where he built the onboarding flow for businesses and consultants (the platform's users) and helped deploy the application on Heroku."
+  },
+  {
+    "id": "skill-1",
+    "text": "Nimesh's core backend skill set centers on Node.js, TypeScript, GraphQL, and PostgreSQL, built up across his software engineering roles at Nova Benefits and earlier internships. He has professional backend engineering experience dating back to November 2020."
+  },
+  {
+    "id": "skill-2",
+    "text": "On the frontend, Nimesh has experience with React, Vue2, and Angular. He also has voice-interface (VUI) development experience building applications for Google Assistant, Amazon Alexa, and Samsung Bixby."
+  },
+  {
+    "id": "skill-3",
+    "text": "Nimesh has hands-on experience with cloud and integration technologies including AWS, Firebase Cloud Functions, Twilio, and DialogFlow, primarily through his personal projects and voice-application work."
+  },
+  {
+    "id": "proj-1",
+    "text": "Nimesh built Big Basket Notifier, a Node.js tool created during COVID-19 that notified users when a grocery delivery slot became available on BigBasket. It used Twilio for notifications, ran on AWS, and was built by reverse-engineering BigBasket's API using Chrome Dev Tools."
+  },
+  {
+    "id": "proj-2",
+    "text": "Nimesh built PDPU Scheduler, a voice app for Google Assistant that told students their day-to-day class and lab schedule. It used DialogFlow for the conversational layer, Node.js and Firebase Cloud Functions for the backend, and Moment.js for date handling."
+  },
+  {
+    "id": "proj-3",
+    "text": "Nimesh built the GDG Ahmedabad voice app for Google Assistant, which shared information about Google Developer Group (GDG) events, DevFests, core committee members, and talk schedules. It used DialogFlow, Node.js, and Firebase Cloud Functions."
+  },
+  {
+    "id": "proj-4",
+    "text": "Nimesh built a Data Structure Visualizer voice app for Samsung Bixby that explained linear and non-linear data structures and showed a visual representation of each one. It was built with Node.js on the backend."
+  },
+  {
+    "id": "award-1",
+    "text": "Nimesh received the 'Rising Star in Voice' award at the Inside Voice Podcast Awards, part of VOICE Summit 2019, recognizing his early work and speaking in the voice-technology (VUI) community."
+  },
+  {
+    "id": "award-2",
+    "text": "Nimesh was named a First Class Premier Developer in the Samsung Bixby Premier Developer Program in 2019, recognized by Samsung Electronics America."
+  },
+  {
+    "id": "award-3",
+    "text": "Nimesh was ranked the #1 VOICE Ambassador Globally in the Voice Event Ambassador Program at Voice Summit 2019."
+  },
+  {
+    "id": "award-4",
+    "text": "Nimesh was a tech speaker at DevFest Ahmedabad in both 2019 and 2018, organized by GDG (Google Developer Group) Ahmedabad, speaking on voice user interface (VUI) design best practices and related topics."
+  },
+  {
+    "id": "award-5",
+    "text": "Nimesh conducted an Alexa Skill Development workshop at PDPU's TechFest 2019, teaching students how to build voice applications for Amazon Alexa."
+  },
+  {
+    "id": "about-1",
+    "text": "Nimesh describes himself as a developer with backend experience in Node.js, voice-platform experience across Google Assistant, Amazon Alexa, and Samsung Bixby, and frontend experience in Angular and React. He is generally interested in engineering roles with a competitive, challenging environment."
+  },
+  {
+    "id": "contact-1",
+    "text": "The best way to contact Nimesh directly is by email at nimesh3536@gmail.com. His resume is also available for download on his portfolio site."
+  }
+]
