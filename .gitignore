@@ -6,5 +6,6 @@ coverage/
 .env
 # Local Netlify folder
 .netlify
+deno.lock
 
 .parcel-cache/
