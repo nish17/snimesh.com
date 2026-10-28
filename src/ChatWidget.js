@@ -90,7 +90,10 @@ const ChatWidget = () => {
       }
 
       const data = await res.json();
-      setMessages((prev) => [...prev, { role: 'assistant', text: data.reply, grounded: data.grounded }]);
+      setMessages((prev) => [
+        ...prev,
+        { role: 'assistant', text: data.reply, grounded: data.grounded, error: data.error },
+      ]);
 
       const nextCap = { count: capState.count + 1, date: todayKey() };
       setCapState(nextCap);
@@ -145,7 +148,12 @@ const ChatWidget = () => {
               </div>
             )}
             {messages.map((message, index) => {
-              const isRefusal = message.role === 'assistant' && message.grounded === false;
+              const isRefusal =
+                message.role === 'assistant' &&
+                message.grounded === false &&
+                message.error !== 'provider' &&
+                !message.isError &&
+                !message.rateLimited;
               return (
                 <div
                   key={index}

@@ -166,7 +166,7 @@ export async function getReply(systemPrompt, message) {
       return await callProvider({
         url: 'https://api.groq.com/openai/v1/chat/completions',
         apiKey: process.env.GROQ_API_KEY,
-        model: 'llama-3.3-70b-versatile',
+        model: 'qwen/qwen3.8-27b',
         systemPrompt,
         message,
         signal: controller.signal,
@@ -177,7 +177,7 @@ export async function getReply(systemPrompt, message) {
       return await callProvider({
         url: 'https://openrouter.ai/api/v1/chat/completions',
         apiKey: process.env.OPENROUTER_API_KEY,
-        model: 'meta-llama/llama-3.3-70b-instruct:free',
+        model: 'google/gemma-4-31b-it:free',
         systemPrompt,
         message,
         signal: controller.signal,
@@ -226,8 +226,8 @@ export default async (req) => {
   try {
     reply = await getReply(systemPrompt, message);
   } catch {
-    logQuestion({ sessionId, message, grounded: false, providerError: true });
-    return jsonResponse({ reply: PROVIDER_FAILURE_MESSAGE, grounded: false }, 200);
+    logQuestion({ sessionId, message, grounded: true, providerError: true });
+    return jsonResponse({ reply: PROVIDER_FAILURE_MESSAGE, grounded: true, error: 'provider' }, 200);
   }
 
   logQuestion({ sessionId, message, grounded: true });

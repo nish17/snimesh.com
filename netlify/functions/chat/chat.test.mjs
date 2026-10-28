@@ -1,6 +1,13 @@
 import { test, beforeEach, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import handler, { tokenize, scoreChunk, retrieveChunks, buildSystemPrompt, config } from './chat.mjs';
+
+const facts = JSON.parse(
+  readFileSync(new URL('../../../knowledge/facts.json', import.meta.url), 'utf-8')
+).map((fact) => ({ ...fact, tokens: tokenize(fact.text) }));
+
+const RETRIEVAL_THRESHOLD = 1;
 
 const ALLOWED_ORIGIN = 'https://www.snimesh.com';
 
@@ -52,6 +59,10 @@ test('tokenize lowercases, strips punctuation, and drops very short tokens', () 
   assert.deepEqual(tokenize('Node.js is a great tool!'), ['node', 'great', 'tool']);
 });
 
+test('tokenize drops curated stopwords so function words do not inflate scores', () => {
+  assert.deepEqual(tokenize('does he know react'), ['know', 'react']);
+});
+
 test('scoreChunk counts distinct overlapping tokens', () => {
   const score = scoreChunk(['nova', 'benefits', 'notification'], ['nova', 'benefits', 'engine']);
   assert.equal(score, 2);
@@ -73,6 +84,37 @@ test('buildSystemPrompt embeds chunk text and grounding/third-person instruction
   assert.match(prompt, /Nimesh built X\./);
 });
 
+test('natural recruiter questions score above the retrieval threshold against facts.json', () => {
+  const questions = [
+    'what tech stack is he good at?',
+    'does he know react?',
+    'what companies has he worked at?',
+    'how many years of experience does he have?',
+  ];
+  for (const question of questions) {
+    const top = retrieveChunks(question, facts, 4);
+    assert.ok(
+      (top[0]?.score ?? 0) >= RETRIEVAL_THRESHOLD,
+      `expected "${question}" to retrieve at least one chunk, score=${top[0]?.score ?? 0}`
+    );
+  }
+});
+
+test('off-topic questions including compensation stay below the retrieval threshold', () => {
+  const questions = [
+    'Can you recommend a good pizza restaurant nearby?',
+    'what is his salary?',
+    'what is the weather in mumbai?',
+  ];
+  for (const question of questions) {
+    const top = retrieveChunks(question, facts, 4);
+    assert.ok(
+      (top[0]?.score ?? 0) < RETRIEVAL_THRESHOLD,
+      `expected "${question}" to be refused, score=${top[0]?.score ?? 0} id=${top[0]?.id}`
+    );
+  }
+});
+
 // --- Integration tests for the handler ---
 
 test('happy path: a well-matched question returns a grounded reply from Groq', async () => {
@@ -90,7 +132,7 @@ test('happy path: a well-matched question returns a grounded reply from Groq', a
   assert.equal(data.grounded, true);
   assert.equal(data.reply, 'He built the PDPU Scheduler using Google Assistant.');
   assert.equal(capturedRequest.url, 'https://api.groq.com/openai/v1/chat/completions');
-  assert.equal(capturedRequest.body.model, 'llama-3.3-70b-versatile');
+  assert.equal(capturedRequest.body.model, 'qwen/qwen3.8-27b');
   assert.match(capturedRequest.body.messages[0].content, /third person/i);
 });
 
@@ -140,7 +182,7 @@ test('edge case: a message exceeding the length limit returns 400 with no provid
 test('error path: Groq failure falls back to OpenRouter with the same request shape', async () => {
   const calls = [];
   globalThis.fetch = async (url, options) => {
-    calls.push(url);
+    calls.push({ url, model: JSON.parse(options.body).model });
     if (url.includes('groq.com')) {
       return new Response('server error', { status: 500 });
     }
@@ -155,11 +197,13 @@ test('error path: Groq failure falls back to OpenRouter with the same request sh
   assert.equal(data.grounded, true);
   assert.equal(data.reply, 'Fallback reply from OpenRouter.');
   assert.equal(calls.length, 2);
-  assert.match(calls[0], /groq\.com/);
-  assert.match(calls[1], /openrouter\.ai/);
+  assert.match(calls[0].url, /groq\.com/);
+  assert.equal(calls[0].model, 'qwen/qwen3.8-27b');
+  assert.match(calls[1].url, /openrouter\.ai/);
+  assert.equal(calls[1].model, 'google/gemma-4-31b-it:free');
 });
 
-test('error path: both providers failing returns a graceful reply, not an unhandled exception', async () => {
+test('error path: both providers failing returns a provider error, not a knowledge refusal', async () => {
   globalThis.fetch = async () => new Response('server error', { status: 500 });
 
   const req = makeRequest('Tell me about the PDPU Scheduler project and Google Assistant.');
@@ -167,8 +211,15 @@ test('error path: both providers failing returns a graceful reply, not an unhand
   const data = await res.json();
 
   assert.equal(res.status, 200);
-  assert.equal(data.grounded, false);
+  assert.equal(data.grounded, true);
+  assert.equal(data.error, 'provider');
   assert.match(data.reply, /trouble answering/i);
+  assert.doesNotMatch(data.reply, /don't have that info/i);
+
+  assert.equal(loggedLines.length, 1);
+  const entry = JSON.parse(loggedLines[0]);
+  assert.equal(entry.grounded, true);
+  assert.equal(entry.providerError, true);
 });
 
 test('error path: a request with a mismatched Origin header is rejected before any scoring or provider call', async () => {

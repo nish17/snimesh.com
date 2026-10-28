@@ -13,6 +13,7 @@
   --tech-title-color: #757575;
   --award-title-color: #757575;
   --active-nav-color: #f26b38;
+  --page-border-width: 8px;
 }
 
 html[data-theme="dark"] {
@@ -21,7 +22,7 @@ html[data-theme="dark"] {
   --primary-color: #ff7f50;
   --secondary-color: #ffd700;
   --nav-bg-color: #2a2a2a;
-  --border-color: #ff7f50;
+  /* --border-color: #ff7f50; */
   --footer-bg-color: #2a2a2a;
   --card-border-color: #4a4a4a;
   --tech-title-color: #b0b0b0;
@@ -78,7 +79,7 @@ html {
 .page-border {
   position: fixed;
   inset: 0;
-  border: 30px solid var(--border-color);
+  border: var(--page-border-width) solid var(--border-color);
   z-index: 1000;
   pointer-events: none;
   box-sizing: border-box;
@@ -141,9 +142,9 @@ html {
   background-color: var(--nav-bg-color);
   position: fixed;
   height: 50px;
-  top: 30px;
-  left: 30px;
-  right: 30px;
+  top: 8px;
+  left: 8px;
+  right: 8px;
   z-index: 2000;
   width: auto;
   transition: background-color 0.3s ease;
@@ -514,7 +515,7 @@ html {
   }
 
   .page-border {
-    border-width: 15px;
+    --page-border-width: 6px;
   }
 
   .main-container {
@@ -1048,20 +1049,21 @@ html {
    deferred follow-on work (see docs/plans/2026-07-07-001-feat-ai-portfolio-chatbot-plan.md). */
 .chat-widget {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
+  bottom: calc(var(--page-border-width) + 12px);
+  right: calc(var(--page-border-width) + 12px);
+  z-index: 3000;
   font-family: 'Roboto Mono';
 }
 
 .chat-widget-toggle {
   background-color: var(--primary-color);
   color: #ffffff;
-  border: none;
+  border: 2px solid var(--bg-color);
   border-radius: 24px;
   padding: 12px 20px;
   font-size: 14px;
   cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
 }
 
 .chat-widget-panel {
